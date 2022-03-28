@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="朴素贝叶斯和贝叶斯网络, 这里是网站关键词">
+    <meta name="keywords" content="(now!)NLP发展到Transformer相关及改进模型, 这里是网站关键词">
     <meta name="description" content="这里是网站描述">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>朴素贝叶斯和贝叶斯网络 | itsNeko博客开源版</title>
+    <title>(now!)NLP发展到Transformer相关及改进模型 | itsNeko博客开源版</title>
     
     <script>
         // 隐藏
@@ -126,8 +126,8 @@
             s.parentNode.insertBefore(bp, s);
         })();
     </script>
-<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="itsNeko博客开源版" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.0.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="itsNeko博客开源版" type="application/atom+xml">
+</head>
 
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
@@ -895,12 +895,12 @@ class="themespring" -->
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/toc-banner/suibi1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">朴素贝叶斯和贝叶斯网络</h1>
+                    <h1 class="description center-align post-title">(now!)NLP发展到Transformer相关及改进模型</h1>
                 </div>
             </div>
         </div>
@@ -1017,7 +1017,1192 @@ class="themespring" -->
 
 <div class="row">
     
+    
+        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="技术">
+            <style>
+    #switchspring {
+        bottom: 223px!important;
+    }
+    @media only screen and (max-width: 601px) {
+        #switchspring {
+            bottom: 178px!important;
+        }
+    }
+    #switchchristmas {
+        bottom: 281px!important;
+    }
+    @media only screen and (max-width: 601px) {
+        #switchchristmas {
+            bottom: 235px!important;
+        }
+    }
+    .ititle {
+        margin: 15px 0;
+        text-align:center;
+        font-family: 'Architects Daughter', cursive;
+    }
+    .ipage {
+        line-height: 30px;
+        margin: 0 auto;
+        padding: 15px 32px 29px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+        -moz-border-radius-bottomleft: 20px 500px;
+        -moz-border-radius-bottomright: 500px 30px;
+        -moz-border-radius-topright: 5px 100px;	
+        -webkit-border-bottom-left-radius: 20px 500px;
+        -webkit-border-bottom-right-radius: 64px 10px;
+        -webkit-border-top-right-radius: 5px 100px;    
+        border-bottom-left-radius: 20px 500px;
+        border-bottom-right-radius: 64px 10px;
+        border-top-right-radius: 5px 100px;           
+        -webkit-background-size: 100% 30px;
+        -moz-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        text-shadow: 0 1px 0 #F6EF97;
+        position: relative;
+    }
+.izhengwen {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: auto;
+    background: repeating-linear-gradient(to bottom, #f9f9f9, #f9f9f9 31px, #6BA2D8 1px, #f9f9f9);
+    background-size: 100% 32px;
+}
+.izhengwen p {
+    letter-spacing: .1rem;
+}
+#articleContent p {
+    margin: 0
+}
+.ititle {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.45rem!important;
+    padding: 10px auto;
+}
+.izhengwen p {
+    position: relative;
+    line-height: 2.2rem!important;
+    text-indent: 2em;
+    font-family: 'Architects Daughter', cursive!important;
+    font-size: 1.45rem!important;
+}
+.ipage::before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 52px;
+    z-index: 4;
+    width: 4px;
+    height: 100%;
+    border-left: 1px solid #fca1a1;
+}
+.izhengwen p:nth-child(odd):before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    z-index: 3;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+}
+.ipage:after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 52px;
+    z-index: 3;
+    width: 4px;
+    height: 100%;
+    border-left: 4px double #fca1a1;
+}
+.ipage p {
+    padding: 0 2em;
+    color: #333!important;
+}
+body.dark .ipage {
+    opacity: 0.85;
+}
+/*小屏幕下(手机类)的样式*/
+@media only screen and (max-width: 600px) {
+    .ipage {
+        padding: 15px 23px 29px;
+    }
+    .ipage:after {
+        left: 36px;
+    }
+    .ipage::before {
+        right: 36px;    
+    }
+    .ipage p, .ititle {
+        padding: 0 0.9em;
+    }
+
+}
+h3 {
+    font-size: 1.32rem;
+    font-weight: 400;
+    color: #101012;
+    transition: 0.8s;
+    cursor: pointer;
+}
+h3:hover {
+    transform: translateX(15px);
+}
+</style>
+
+<!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        
+        <div class="card-content article-info">
+            <!-- 福袋按钮 -->
+            <div class="caishendeng">        
+                <div class="guguxian wenzhangxian">
+                    <img class="caishenpic gugus" src="/medias/spring-img/caishen.png" />
+                </div>              
+            </div>
+            <!-- 圣诞按钮 -->
+            <div class="shengdandeng">        
+                <div class="shengdanxian" style="left: 50%;">
+                    <img class="shengdanpic fudai" src="/medias/christmas-img/shengdanren4.png" />
+                </div>              
+            </div>
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                                <span class="chip bg-color">技术</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                技术
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-12-14
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    9 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <div class="note info">(now!)NLP发展到Transformer相关及改进模型</div>
+
+<h3 id="0-NLP"><a href="#0-NLP" class="headerlink" title="0. NLP"></a>0. NLP</h3><h4 id="0-1-发展"><a href="#0-1-发展" class="headerlink" title="0.1 发展"></a>0.1 发展</h4><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d35a2fd593eb">https://www.jianshu.com/p/d35a2fd593eb</a></p>
+<h4 id="0-2-训练流程"><a href="#0-2-训练流程" class="headerlink" title="0.2 训练流程"></a>0.2 训练流程</h4><h3 id="1-RNN和LSTM"><a href="#1-RNN和LSTM" class="headerlink" title="1. RNN和LSTM"></a>1. RNN和LSTM</h3><p><img src="https://s2.loli.net/2022/03/28/gyZSjrW5xHMX2Fh.png" alt="image-20220317203059808" style="zoom: 33%;"></p>
+<p>单词的先后顺序会影响句子的意思，RNN擅长捕捉序列关系，不过对于翻译来说，句子间的单词数量不是一一对应的。</p>
+<h4 id="1-1-缺点"><a href="#1-1-缺点" class="headerlink" title="1.1 缺点"></a>1.1 缺点</h4><ul>
+<li>串行结构，计算速度慢</li>
+<li>梯度爆炸和梯度消失</li>
+</ul>
+<h4 id="1-2-梯度爆炸和梯度消失问题"><a href="#1-2-梯度爆炸和梯度消失问题" class="headerlink" title="1.2 梯度爆炸和梯度消失问题"></a>1.2 梯度爆炸和梯度消失问题</h4><p>见[面试.md]</p>
+<h4 id="1-3-LSTM"><a href="#1-3-LSTM" class="headerlink" title="1.3 LSTM"></a>1.3 LSTM</h4><p>长短期记忆网络相对于RNN，多了一个遗忘门，会适当删减(筛选)前置特</p>
+<h4 id="1-4-存在问题"><a href="#1-4-存在问题" class="headerlink" title="1.4 存在问题"></a>1.4 存在问题</h4><p>受限于结构，RNN只能处理<code>N to N</code>，<code>1 to N</code>和<code>N to 1</code>问题，但是无法处理<code>N to M</code>的问题？</p>
+<hr>
+<h3 id="2-Word2Vec和Seq2Seq"><a href="#2-Word2Vec和Seq2Seq" class="headerlink" title="2. Word2Vec和Seq2Seq"></a>2. Word2Vec和Seq2Seq</h3><p><img src="https://s2.loli.net/2022/03/28/L5eAP6CJUgc9pxf.png" alt="image-20220317203445862" style="zoom: 33%;"></p>
+<p><code>Seq2Seq</code>是一个拥有编码器<code>Encoder</code>和解码器<code>Decoder</code>的模型，<code>Encoder</code>和<code>Decoder</code>依然是RNN网络，不过在<code>Seq2Seq</code>模型中先由<code>Encoder</code>提取原始句子的意义，再由<code>Decoder</code>将意义转化成对应的语言，依靠意义这一中介，<code>Seq2Seq</code>解决了两端单词数不对等的情况。</p>
+<p>意义单元能够存储的信息是有限的，如果一个句子太长，翻译精度就会下降？</p>
+<hr>
+<h3 id="3-Attention"><a href="#3-Attention" class="headerlink" title="3. Attention"></a>3. Attention</h3><h4 id="3-1-描述"><a href="#3-1-描述" class="headerlink" title="3.1 描述"></a>3.1 描述</h4><p>每个阶段我们关注到的内容都有所不同</p>
+<p>机器翻译中，<img src="https://s2.loli.net/2022/03/28/YfS6s2z9PIy7VnD.png" alt="image-20220317205638828" style="zoom: 25%;">写出每个英文单词时，我们会格外注意其中的一部分汉字</p>
+<p>而<code>Attention</code>可以从纷繁复杂的输入信息中，找出对当前输出最重要的部分<img src="https://s2.loli.net/2022/03/28/GFd3DfI4PbsH68c.png" alt="image-20220317210035081" style="zoom: 25%;"></p>
+<h4 id="3-2-工作原理"><a href="#3-2-工作原理" class="headerlink" title="3.2 工作原理"></a>3.2 工作原理</h4><p><code>Q</code>是<code>QUERY</code>，表示输入信息；<code>Key</code>和<code>Value</code>成对出现，通常原始文本（输入）的信息。通过<strong>计算<code>Q</code>与<code>K</code>之间的相关性</strong>，得出不同的<code>K</code>对输出的重要程度，再与对应的<code>V</code><strong>相乘求和</strong>，就得到了<code>Q</code>的输出。</p>
+<p><img src="https://s2.loli.net/2022/03/28/oQ6g9LGiRf3nMPv.png" alt="image-20220317210904542" style="zoom: 50%;"></p>
+<h5 id="3-2-1-例子"><a href="#3-2-1-例子" class="headerlink" title="3.2.1 例子"></a>3.2.1 例子</h5><p>以阅读理解为例，<code>Q</code>是问题，<code>K</code>和<code>V</code>是原始文本，计算<code>Q</code>与<code>K</code>的相关性，让我们找到文本中最需要注意的部分，利用<code>V</code>得到答案。</p>
+<p><img src="https://s2.loli.net/2022/03/28/9WxZ5Pi7erRVLop.png" alt="image-20220317211208013" style="zoom: 50%;"></p>
+<p>在机器翻译中，<code>Q</code>是翻译结果，<code>K</code>是输入文本，<code>V</code>是对应语义</p>
+<p><img src="/posts/articletemplate21.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\transformer.assets\image-20220317204916755.png" alt="image-20220317204916755" style="zoom:50%;"></p>
+<p>在<code>Seq2Seq</code>的基础结构上，在<code>Decoder</code>生成每个单词时，都有意识的从原始句子中提取生成该单词最重要的信息，摆脱了输入序列的长度限制。</p>
+<p>但是在该模型中，RNN需要逐个计算相关性，计算速度太慢了？</p>
+<hr>
+<h3 id="4-Self-Attention"><a href="#4-Self-Attention" class="headerlink" title="4. Self-Attention"></a>4. Self-Attention</h3><p>只关注输入序列元素之间的关系，通过将输入序列直接转化为<code>Q、K、V</code>，然后在内部进行<code>Attention</code>计算，就能很好捕捉文本的内在联系，对其作出再表示</p>
+<hr>
+<h3 id="5-Multi-Head-Attention"><a href="#5-Multi-Head-Attention" class="headerlink" title="5. Multi-Head Attention"></a>5. Multi-Head Attention</h3><p>使用多种变换生成不同的<code>Q、K、V</code>进行运算，再将他们对相关语句的意义的结论综合起来，进一步增强<code>Self-Attention</code>的效果</p>
+<hr>
+<h3 id="6-Transformer-Bert-GPT"><a href="#6-Transformer-Bert-GPT" class="headerlink" title="6. Transformer(Bert+GPT)"></a>6. Transformer(Bert+GPT)</h3><h4 id="6-0-简介"><a href="#6-0-简介" class="headerlink" title="6.0 简介"></a>6.0 简介</h4><h4 id="6-1-Transformer和CNN对比-图像领域"><a href="#6-1-Transformer和CNN对比-图像领域" class="headerlink" title="6.1 Transformer和CNN对比(图像领域)"></a>6.1 Transformer和CNN对比(图像领域)</h4><p><img src="/posts/articletemplate21.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\transformer.assets\image-20220318122215704.png" alt="image-20220318122215704"></p>
+<ul>
+<li>在<strong><code>CNN</code></strong>应用到海量数据后，就会发现其<strong>对数据的适配能力不够强</strong>；而<code>Transformer</code>对大数据的适配能力很强，可以明显看到随着数据的增加，表现/性能<code>performance</code>不断增加。</li>
+<li><code>Transformer</code>的<strong>每个参数是动态变化的</strong>；而<code>CNN</code>学习参数一旦学习完后就固定了<code>fixed</code>。<code>Transformer</code>对每张图的参数都是不一样的、随时变化的，就可以有无限的参数空间来做一件事。像<code>CNN</code>中新引入的<code>Dynamic Network</code>、<code>Dynamic convolution</code>、<code>Dynamic Relu</code>等概念都是为了把这个参数动态化</li>
+</ul>
+<h4 id="6-2-Interest-Point和Attention"><a href="#6-2-Interest-Point和Attention" class="headerlink" title="6.2 Interest Point和Attention"></a>6.2 Interest Point和Attention</h4><p><code>Attention</code>关注<code>feature</code>彼此之间的<strong>相互关系</strong>，<strong><code>Interest Point</code></strong>(如sift/hog中等)则是<strong>可以学到哪些点更突出、更有表达力</strong>。</p>
+<blockquote>
+<p>思考：这Attention和Interest Point是否可以在学习过程中彼此互补？</p>
+</blockquote>
+<h4 id="6-3-总结"><a href="#6-3-总结" class="headerlink" title="6.3 总结"></a>6.3 总结</h4><ul>
+<li><code>dynamic</code>比<code>static</code>好</li>
+<li><code>close loop</code>比<code>open loop</code>好</li>
+</ul>
+<hr>
+<h3 id="7-Bert"><a href="#7-Bert" class="headerlink" title="7. Bert"></a>7. Bert</h3><blockquote>
+<p>机器是如何理解语言的？</p>
+</blockquote>
+<p>就像图像由像素组成，而像素是由<code>RGB</code>数值表示，我们没有办法让机器直接理解语言，需要将它们转换成机器能明白的东西，比如数字组成的向量。</p>
+<blockquote>
+<p>为什么使用向量表示语言？</p>
+</blockquote>
+<p>词语的意义之间是有关联的，<strong>距离</strong>可以表示词与词直接的<strong>关系</strong>。</p>
+<p><img src="/posts/articletemplate21.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\transformer.assets\image-20220318101308833.png" alt="image-20220318101308833" style="zoom:33%;"></p>
+<blockquote>
+<p>如何得到向量？</p>
+</blockquote>
+<p>机器学习的出现让我们不必为一个单词设计向量，而是将收集好的句子、文章等数据交给模型，由它为单词们找到最合适的位置。</p>
+<h4 id="7-1-Transformer-gt-Bert"><a href="#7-1-Transformer-gt-Bert" class="headerlink" title="7.1 Transformer-&gt;Bert"></a>7.1 Transformer-&gt;Bert</h4><p><img src="/posts/articletemplate21.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\transformer.assets\image-20220318102104340.png" alt="image-20220318102104340" style="zoom:50%;"></p>
+<p><code>Bert</code>就是帮助我们找到词之间位置关系的模型之一，<code>Bert</code>源于<code>Transformer</code>。</p>
+<p>既然<code>Encoder</code>可以将语义很好地抽离出来，直接将这部分独立(<code>Bert</code>)，也能很好地对语言作出表示。</p>
+<h4 id="7-2-Bert的训练"><a href="#7-2-Bert的训练" class="headerlink" title="7.2 Bert的训练"></a>7.2 Bert的训练</h4><p>除了结构，人们还为<code>Bert</code>设计了独特的训练方式：</p>
+<ul>
+<li>遮挡<code>masked</code>训练，对语料<strong>随机覆盖</strong><code>15%</code>的词汇，让<code>Bert</code>去猜这些词汇是什么（<strong>完形填空</strong>）</li>
+<li>利用Next Sentence Prediction任务学习句子级别的信息(或者可以理解为上下文是否匹配)<img src="/posts/articletemplate21.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\Transformer相关及改进模型.assets\image-20220318222210585.png" alt="image-20220318222210585" style="zoom:50%;"></li>
+</ul>
+<p><strong>总结</strong>：前者可以让<code>Bert</code>更好地依据语境进行预测（完形填空），后者让<code>Bert</code>对上下文关系有更好的理解（阅读理解）</p>
+<h4 id="7-3-Bert的应用"><a href="#7-3-Bert的应用" class="headerlink" title="7.3 Bert的应用"></a>7.3 Bert的应用</h4><p>在完成不同的<code>NLP</code>任务时，需要将已经训练好的<code>Bert</code>依据任务目标，增加不同功能的输出层联合训练。</p>
+<ul>
+<li>文本分类增加了分类器<code>Linear classifier</code>（输入句子，输出类别<code>如欺诈</code>）</li>
+<li>阅读理解增加了一个全连接层<code>softmax</code>（输入问题和文章，输出答案的位置）</li>
+</ul>
+<p>面对不同任务，<code>Bert</code>只需对任务作出微调即可</p>
+<p><img src="/posts/articletemplate21.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\transformer.assets\image-20220318103412291.png" alt="image-20220318103412291" style="zoom:50%;"></p>
+<hr>
+<h3 id="8-GPT-生成式预训练Transformer"><a href="#8-GPT-生成式预训练Transformer" class="headerlink" title="8. GPT(生成式预训练Transformer)"></a>8. GPT(生成式预训练Transformer)</h3><p><img src="/posts/articletemplate21.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\transformer.assets\image-20220318095857731.png" alt="image-20220318095857731" style="zoom:50%;"></p>
+<p><code>Transformer</code>的<code>Encoder</code>变成了<code>Bert</code>，<code>Decoder</code>变成了<code>GPT</code>。</p>
+<p><code>GPT</code>也是一个预训练语言模型，同样需要面对不同任务进行微调<code>fine tuning</code></p>
+<h4 id="8-1-应用-生成"><a href="#8-1-应用-生成" class="headerlink" title="8.1 应用(生成)"></a>8.1 应用(生成)</h4><p><code>next-token prediction</code></p>
+<ul>
+<li>机器翻译、文本摘要等基于原始文本信息的任务</li>
+<li>新闻写作等无中生有的生成类任务</li>
+<li>学习过大量的音乐数据后，给出一个乐句，<code>GPT-2</code>就能生成一段音乐</li>
+<li>使用文本和对应图像的数据进行训练，<code>GPT-3</code>就能依据描述输出图像，哪怕真实世界并不存在的也能生成</li>
+</ul>
+<h4 id="8-2-GPT-3-暂未开源"><a href="#8-2-GPT-3-暂未开源" class="headerlink" title="8.2 GPT-3(暂未开源)"></a>8.2 GPT-3(暂未开源)</h4><p><code>GPT-3</code>是一个拥有<code>1750</code>亿参数的预训练模型，不需要面对不同的任务再训练，也不需要微调就能直接使用，这就是所谓的<strong>零样本学习<code>Zero-Shot Learning</code></strong>。</p>
+<p>与语言模型相比，<code>GPT-3</code>更接近一个<strong>包含知识、语境理解和语言组织能力</strong>的<strong>数据库</strong>。</p>
+<h5 id="8-2-1-强大功能"><a href="#8-2-1-强大功能" class="headerlink" title="8.2.1 强大功能"></a>8.2.1 强大功能</h5><ul>
+<li>结构决定了功能，<code>Decoder</code>的输出都基于上一步输出的内容(也就是<code>Bert</code>输出的语义)，这时的<strong>生成</strong>成了<code>GPT</code>最强大的能力，给它一个开头，它就能依据这些这些文字的风格和内容不断续写，甚至可以创作歌词和小说。</li>
+<li>进一步训练后，<code>GPT</code>还能跨越语言的壁垒，如音乐生成和根据描述生成图像等</li>
+</ul>
+<hr>
+<h3 id="9-ViT-Vision-Transformer"><a href="#9-ViT-Vision-Transformer" class="headerlink" title="9. ViT(Vision Transformer)"></a>9. ViT(Vision Transformer)</h3><p>通过将图片切块划分转化为序列作为输入</p>
+<p>ViT使用的<code>Transformer</code>没有考虑<code>Transformer</code>对于词在不同位置语义的变化（也就是<code>Transformer</code>更关注图像特征之间的），所以只能用来做分类任务，而图像出现在哪个位置、具体哪些像素属于这个类别，也就是目标检测和分隔仍无法实现，而<code>Swin Transformer</code>解决了这一问题。</p>
+<hr>
+<h3 id="10-迁移学习-Transfer-Learning"><a href="#10-迁移学习-Transfer-Learning" class="headerlink" title="10. 迁移学习(Transfer Learning)"></a>10. 迁移学习(Transfer Learning)</h3><ul>
+<li><p>CNN中前几层都是在提取特征，直到全连接层才进行分类。提取特征的过程很相似，我们可以拿出来直接用，再用苹果与梨的数据训练新的全连接层完成分类。</p>
+</li>
+<li><p>像这样利用数据、任务和模型间的<strong>相似性</strong>，将训练好的内容<strong>应用</strong>到新的任务上，被称为迁移学习。</p>
+</li>
+<li><p>由于这一过程发生在两个领域间，已有的知识和数据，也就是被迁移的对象被称为源域；被赋予经验的领域被称为目标域。</p>
+</li>
+<li><p>不是一种模型，更像是一种<strong>解题思路</strong></p>
+</li>
+</ul>
+<h4 id="10-1-优点"><a href="#10-1-优点" class="headerlink" title="10.1 优点"></a>10.1 优点</h4><ul>
+<li>目标领域的数据太少，需要数据更多的源域的帮助</li>
+<li>为了节约训练时间</li>
+<li>实现个性化应用<code>individualized</code></li>
+</ul>
+<h4 id="10-2-应用及与预训练模型关系"><a href="#10-2-应用及与预训练模型关系" class="headerlink" title="10.2 应用及与预训练模型关系"></a>10.2 应用及与预训练模型关系</h4><h5 id="10-2-1-应用"><a href="#10-2-1-应用" class="headerlink" title="10.2.1 应用"></a>10.2.1 应用</h5><ul>
+<li>语料匮乏的小语种之间的翻译</li>
+<li>缺乏标注的医疗影像数据识别</li>
+<li>面向不同领域快速部署对话系统</li>
+</ul>
+<h5 id="10-2-2-预训练模型与迁移学习的关系"><a href="#10-2-2-预训练模型与迁移学习的关系" class="headerlink" title="10.2.2 预训练模型与迁移学习的关系"></a>10.2.2 预训练模型与迁移学习的关系</h5><p>预训练模型是迁移学习的一种，就像预先学习了一个指数/技术，然后再把这个知识/技术代入到具体任务中。</p>
+<p>像<code>Transformer</code>、<code>Bert</code>、<code>GPT</code>这些<strong>预训练语言模型</strong>，微调后可以完成不同的任务。</p>
+<hr>
+<h3 id="11-提升篇"><a href="#11-提升篇" class="headerlink" title="11. 提升篇"></a>11. 提升篇</h3><h4 id="11-1-模型"><a href="#11-1-模型" class="headerlink" title="11.1 模型"></a>11.1 模型</h4><ul>
+<li>SGNS/cBow、FastText、ELMo等（词向量）</li>
+<li>DSSM、DecAtt、ESIM等（问答和匹配）</li>
+<li>HAN、DPCNN等（分类）</li>
+<li>BiDAF、DrQA、QANet等（MRC）</li>
+<li>CoVe、InferSent等（迁移）</li>
+<li>MM、N-shortest等（分词）</li>
+<li>Bi-LSTM-CRF等（NER）</li>
+<li>LDA等主题模型（文本表示）</li>
+</ul>
+<h4 id="11-2-训练"><a href="#11-2-训练" class="headerlink" title="11.2 训练"></a>11.2 训练</h4><ul>
+<li>point-wise、pair-wise和list-wise（匹配、ranking模型）</li>
+<li>负采样：从非当前label中选择几个作为负样本加入，作为出现负样本的概率加入到损失函数中<ul>
+<li>优点<ul>
+<li>提高训练速度</li>
+<li>改进效果(模拟真实环境下噪声情况，让模型鲁棒性更强)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>NCE(噪声对比估计)：通过学习数据样本分布和噪声样本分布的区别，从而发现样本的特性。<ul>
+<li>作用<ul>
+<li>解决归一化参数密度估计问题</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>层级softmax方法(fastText模型)，哈夫曼树的构建</li>
+<li>不均衡问题的处理</li>
+<li>KL散度与交叉熵loss函数</li>
+</ul>
+<h4 id="11-3-评估指标"><a href="#11-3-评估指标" class="headerlink" title="11.3 评估指标"></a>11.3 评估指标</h4><ul>
+<li>F1-score</li>
+<li>PPL</li>
+<li>MRR</li>
+<li>MAP</li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">itsNeko博客开源版</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://jnych.github.io/posts/articletemplate21.html">https://jnych.github.io/posts/articletemplate21.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">itsNeko博客开源版</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                                    <span class="chip bg-color">技术</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢赞赏哦~</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+    .v[data-class=v] .emoji, .v[data-class=v] .vemoji {
+        max-height: 20px;
+        overflow: hidden;
+        max-width: 20px!important;
+    }
+    .v[data-class=v] .vwrap .vemojis {
+        text-align: center;
+    }
+    .roboterbb {
+        position: absolute;
+        right: 87px;
+        padding-top: 3px;
+    }
+    .robot-check-text:hover {
+        color: #26a69a;
+    }
+    .roboter:hover .robot-check-text::before {
+        border: 2px solid #5a5a5a;
+    }
+    .robotxian {
+        background: #5a5a5a;
+        top: 21px;
+        left: 11px!important;
+        transform-origin: 50% -17px;
+        animation: swing 3.5s infinite ease-in-out;
+        -webkit-transform-origin: 50% -17px;
+        -webkit-animation: swing 2.85s infinite ease-in-out;
+    }
+    .v[data-class=v] .vwrap {
+        padding-bottom: 23px;
+    }
+    .robotimg {
+        width: 28px!important;
+        height: 28px!important;
+        top: 14px!important;
+        left: -13px!important;
+        max-width: none!important;
+        z-index: 99;
+        cursor: none!important;
+    }
+    .v[data-class=v] .vbtn:disabled {
+        color: #b2b2b5;
+        border-color: #b2b2b5;
+    }
+    .v[data-class=v] .vbtn:disabled {
+        background-color: transparent;
+    }
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+    .v[data-class=v] .vwrap {
+        border-radius: 8px;
+    }
+    /* #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg1.webp") 100% 100% no-repeat;
+    } */
+    #vcomments textarea {
+        background: url(/medias/comment_bg1.webp) no-repeat;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-color: rgba(255,255,255,0);
+        resize: vertical;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" id="vcomments-top">
+
+    <!-- 福袋按钮 -->
+    <div class="caishendeng">        
+        <div class="caishenxian fudaixian">
+            <img class="caishenpic fudao" src="/medias/spring-img/fudao.png" />
+        </div>              
+    </div>
+   
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评 论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        enableQQ: true,
+        boolean: true,
+        appId: '',
+        appKey: '',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        // avatar: 'mm',
+        avatar: '/medias/robot.png',
+        pageSize: '16',
+        lang: 'zh-cn',
+        placeholder: '评论前记得点击下方机器人验证按钮~ （客官留下QQ邮箱可好，会得到及时回复哦~）',    
+
+        adminEmailMd5: '',
+
+        master: [""],
+        friends: [""],
+        tagMeta: ["博主", "小伙伴", "访客"],
+        // tagMeta: '博主,小伙伴,访客',
+        // master: '',
+        // friends: '',
+        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest"]
+    });
+</script>
+<!-- 直达评论 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>
+
+
+<!-- 评论机器人验证 -->
+<script>
+    $('.roboter').on('click',function(){
+        $('.robot-check-text').html('·&nbsp;&nbsp;&nbsp;验证成功！');
+        $('.roboter:hover .robot-check-text::before').css('border','2px solid #26a69a');
+        $('.robotxian').css('background','#26a69a');
+        $('.robotimg').attr('src','/medias/robot.png');
+        $('.robot-check-text').css('color','#26a69a');
+    });
+    
+    if(!$('.robot-check').checked) {
+        // alert("请勾选机器人验证后再发表评论！");
+        $('.vsubmit').attr('disabled',true).attr('title','评论前勾选机器人验证按钮');
+    } 
+    $('.robot-check').on('click',function(){
+        $('.vsubmit').attr('disabled',false).attr('title','欢迎畅所欲言');
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/articletemplate45.html">
+                    <div class="card-image">
+                        
+                        <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="(writing...)从MLE到EM再到GMM、SMO">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          (writing...)从MLE到EM再到GMM、SMO
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            (writing...)从MLE到EM再到GMM、SMO
+
+.极大似然已知数据及分布，求模型和参数
+1.1 例子
+在伯克利分布(二项分布中)
+
+
+令$\part=0$，得到$\theta$的值
+求极大似然估计值的步骤
+
+写出似然函数
+对数似
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                        <span class="chip bg-color">技术</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/articletemplate6.html">
+                    <div class="card-image">
+                        
+                        <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="拉格朗日乘子法和KKT条件">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          拉格朗日乘子法和KKT条件
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            拉格朗日乘子法和KKT条件
+
+前言，技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言。
+
+如果两个模型的概率分布是不一样的，所以在衡
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                        <span class="chip bg-color">技术</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+<style>
+  .articles .row .article {
+    position: relative;
+  }
+</style>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('30')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: itsNeko博客开源版<br />'
+            + '文章作者: itsNeko博客开源版<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+        </div>
+        
+        
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        
+        
+        <div class="toc-widget" data-spmid="技术">
+            <div class="toc-title">
+                <i class="far fa-list-alt"></i>
+                &nbsp;&nbsp;目录
+            </div>
+            <div id="toc-content"></div>
+        </div>
+        
         
     </div>
 </div>
@@ -1025,6 +2210,12 @@ class="themespring" -->
 <!-- TOC 悬浮按钮. -->
 
     
+<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="技术">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
 
 
 <script src="/libs/tocbot/tocbot.min.js"></script>
@@ -1192,7 +2383,7 @@ class="themespring" -->
             
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">14k</span>&nbsp;
+                class="white-color">29k</span>&nbsp;
             
             
             

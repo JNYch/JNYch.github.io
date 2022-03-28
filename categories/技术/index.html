@@ -126,8 +126,8 @@
             s.parentNode.insertBefore(bp, s);
         })();
     </script>
-<meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="itsNeko博客开源版" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.0.2"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="itsNeko博客开源版" type="application/atom+xml">
+</head>
 
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
@@ -996,6 +996,543 @@ class="themespring" -->
             
             <div class="article tag-post col s12 m6 l4">
                 <div class="card">
+                    <a href="/posts/articletemplate4.html" target="_blank">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="线性回归">
+                            
+                            
+                            <!-- 福袋按钮 -->
+                            <div class="caishendeng">        
+                                <div class="caishenxian fudaixian">
+                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                                </div>              
+                            </div>
+                            <!-- 圣诞按钮 -->
+                            <div class="shengdandeng">        
+                                <div class="shengdanxianyou">
+                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
+                                </div>              
+                            </div>
+
+                            <span class="card-title">
+                              <!-- 文章卡片hover线条效果 -->
+                              <span class="titlesline">
+                                <style>
+                                  .titlesline {
+                                    width: 0px;
+                                    height: 4px;
+                                    background-color: #f2eb00;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 24px;
+                                  }
+                                  body.dark .titlesline {
+                                    filter: brightness(.7);
+                                  }
+                                  article .card .titlesline {
+                                    transition: all 0.36s ease;
+                                  }
+                                  article .card-image:hover .titlesline {
+                                    width: 36px;
+                                  }
+                                </style>
+                              </span>
+                              线性回归
+                            </span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                线性回归
+
+线性回归预测函数：
+
+h_{\theta}(x)=\theta^{T}x逻辑回归预测函数：
+
+h_{\theta}^{(x)}=\frac{1}{1+e^{-\theta^{T}x}}线性回归损失函数：
+
+J(\theta)=\
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                            <span class="chip bg-color">技术</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4">
+                <div class="card">
+                    <a href="/posts/articletemplate8.html" target="_blank">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="这是技术文章模板">
+                            
+                            
+                            <!-- 福袋按钮 -->
+                            <div class="caishendeng">        
+                                <div class="caishenxian fudaixian">
+                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                                </div>              
+                            </div>
+                            <!-- 圣诞按钮 -->
+                            <div class="shengdandeng">        
+                                <div class="shengdanxianyou">
+                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
+                                </div>              
+                            </div>
+
+                            <span class="card-title">
+                              <!-- 文章卡片hover线条效果 -->
+                              <span class="titlesline">
+                                <style>
+                                  .titlesline {
+                                    width: 0px;
+                                    height: 4px;
+                                    background-color: #f2eb00;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 24px;
+                                  }
+                                  body.dark .titlesline {
+                                    filter: brightness(.7);
+                                  }
+                                  article .card .titlesline {
+                                    transition: all 0.36s ease;
+                                  }
+                                  article .card-image:hover .titlesline {
+                                    width: 36px;
+                                  }
+                                </style>
+                              </span>
+                              这是技术文章模板
+                            </span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                熵、信息量、KL散度、交叉熵、最大熵
+
+如果两个模型的概率分布是不一样的，所以在衡量模型的差异的时候，不能直接定性衡量两个模型之间的差异，而是需要定量的衡量两个模型的差异（比如极大似然估计、最小二乘法和交叉熵）
+1.信息量信息量可以理解成一
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                            <span class="chip bg-color">技术</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4">
+                <div class="card">
+                    <a href="/posts/articletemplate66.html" target="_blank">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="(writing...)概率图模型之HMM、MRF和CRF">
+                            
+                            
+                            <!-- 福袋按钮 -->
+                            <div class="caishendeng">        
+                                <div class="caishenxian fudaixian">
+                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                                </div>              
+                            </div>
+                            <!-- 圣诞按钮 -->
+                            <div class="shengdandeng">        
+                                <div class="shengdanxianyou">
+                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
+                                </div>              
+                            </div>
+
+                            <span class="card-title">
+                              <!-- 文章卡片hover线条效果 -->
+                              <span class="titlesline">
+                                <style>
+                                  .titlesline {
+                                    width: 0px;
+                                    height: 4px;
+                                    background-color: #f2eb00;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 24px;
+                                  }
+                                  body.dark .titlesline {
+                                    filter: brightness(.7);
+                                  }
+                                  article .card .titlesline {
+                                    transition: all 0.36s ease;
+                                  }
+                                  article .card-image:hover .titlesline {
+                                    width: 36px;
+                                  }
+                                </style>
+                              </span>
+                              (writing...)概率图模型之HMM、MRF和CRF
+                            </span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                (writing...)概率图模型之HMM、MRF和CRF
+
+0.预备知识先验就是根据经验或历史数据统计分析得到或者理论值（即在采样前就可以得到的数据）又叫边缘概率P(A)/P(B)&lt;–频率学派
+后验就是根据实际样本分析概率分布，即条
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                            <span class="chip bg-color">技术</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4">
+                <div class="card">
+                    <a href="/posts/articletemplate6.html" target="_blank">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="拉格朗日乘子法和KKT条件">
+                            
+                            
+                            <!-- 福袋按钮 -->
+                            <div class="caishendeng">        
+                                <div class="caishenxian fudaixian">
+                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                                </div>              
+                            </div>
+                            <!-- 圣诞按钮 -->
+                            <div class="shengdandeng">        
+                                <div class="shengdanxianyou">
+                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
+                                </div>              
+                            </div>
+
+                            <span class="card-title">
+                              <!-- 文章卡片hover线条效果 -->
+                              <span class="titlesline">
+                                <style>
+                                  .titlesline {
+                                    width: 0px;
+                                    height: 4px;
+                                    background-color: #f2eb00;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 24px;
+                                  }
+                                  body.dark .titlesline {
+                                    filter: brightness(.7);
+                                  }
+                                  article .card .titlesline {
+                                    transition: all 0.36s ease;
+                                  }
+                                  article .card-image:hover .titlesline {
+                                    width: 36px;
+                                  }
+                                </style>
+                              </span>
+                              拉格朗日乘子法和KKT条件
+                            </span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                拉格朗日乘子法和KKT条件
+
+前言，技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言。
+
+如果两个模型的概率分布是不一样的，所以在衡
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                            <span class="chip bg-color">技术</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4">
+                <div class="card">
+                    <a href="/posts/articletemplate21.html" target="_blank">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="(now!)NLP发展到Transformer相关及改进模型">
+                            
+                            
+                            <!-- 福袋按钮 -->
+                            <div class="caishendeng">        
+                                <div class="caishenxian fudaixian">
+                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                                </div>              
+                            </div>
+                            <!-- 圣诞按钮 -->
+                            <div class="shengdandeng">        
+                                <div class="shengdanxianyou">
+                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
+                                </div>              
+                            </div>
+
+                            <span class="card-title">
+                              <!-- 文章卡片hover线条效果 -->
+                              <span class="titlesline">
+                                <style>
+                                  .titlesline {
+                                    width: 0px;
+                                    height: 4px;
+                                    background-color: #f2eb00;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 24px;
+                                  }
+                                  body.dark .titlesline {
+                                    filter: brightness(.7);
+                                  }
+                                  article .card .titlesline {
+                                    transition: all 0.36s ease;
+                                  }
+                                  article .card-image:hover .titlesline {
+                                    width: 36px;
+                                  }
+                                </style>
+                              </span>
+                              (now!)NLP发展到Transformer相关及改进模型
+                            </span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                (now!)NLP发展到Transformer相关及改进模型
+
+0. NLP0.1 发展https://www.jianshu.com/p/d35a2fd593eb
+0.2 训练流程1. RNN和LSTM
+单词的先后顺序会影响句子的意思，R
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                            <span class="chip bg-color">技术</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4">
+                <div class="card">
+                    <a href="/posts/articletemplate45.html" target="_blank">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="(writing...)从MLE到EM再到GMM、SMO">
+                            
+                            
+                            <!-- 福袋按钮 -->
+                            <div class="caishendeng">        
+                                <div class="caishenxian fudaixian">
+                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                                </div>              
+                            </div>
+                            <!-- 圣诞按钮 -->
+                            <div class="shengdandeng">        
+                                <div class="shengdanxianyou">
+                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
+                                </div>              
+                            </div>
+
+                            <span class="card-title">
+                              <!-- 文章卡片hover线条效果 -->
+                              <span class="titlesline">
+                                <style>
+                                  .titlesline {
+                                    width: 0px;
+                                    height: 4px;
+                                    background-color: #f2eb00;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 24px;
+                                  }
+                                  body.dark .titlesline {
+                                    filter: brightness(.7);
+                                  }
+                                  article .card .titlesline {
+                                    transition: all 0.36s ease;
+                                  }
+                                  article .card-image:hover .titlesline {
+                                    width: 36px;
+                                  }
+                                </style>
+                              </span>
+                              (writing...)从MLE到EM再到GMM、SMO
+                            </span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                (writing...)从MLE到EM再到GMM、SMO
+
+.极大似然已知数据及分布，求模型和参数
+1.1 例子
+在伯克利分布(二项分布中)
+
+
+令$\part=0$，得到$\theta$的值
+求极大似然估计值的步骤
+
+写出似然函数
+对数似
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                            <span class="chip bg-color">技术</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4">
+                <div class="card">
                     <a href="/posts/articletemplate3.html" target="_blank">
                         <div class="card-image tag-image">
                             
@@ -1047,186 +1584,6 @@ class="themespring" -->
                         <div class="summary block-with-text">
                             
                                 线性回归、代价函数和梯度下降法
-
-线性回归预测函数：
-
-h_{\theta}(x)=\theta^{T}x逻辑回归预测函数：
-
-h_{\theta}^{(x)}=\frac{1}{1+e^{-\theta^{T}x}}线性回归损失函数：
-
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    技术
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E6%8A%80%E6%9C%AF/">
-                            <span class="chip bg-color">技术</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4">
-                <div class="card">
-                    <a href="/posts/articletemplate4.html" target="_blank">
-                        <div class="card-image tag-image">
-                            
-                            <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="这是技术文章模板">
-                            
-                            
-                            <!-- 福袋按钮 -->
-                            <div class="caishendeng">        
-                                <div class="caishenxian fudaixian">
-                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
-                                </div>              
-                            </div>
-                            <!-- 圣诞按钮 -->
-                            <div class="shengdandeng">        
-                                <div class="shengdanxianyou">
-                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
-                                </div>              
-                            </div>
-
-                            <span class="card-title">
-                              <!-- 文章卡片hover线条效果 -->
-                              <span class="titlesline">
-                                <style>
-                                  .titlesline {
-                                    width: 0px;
-                                    height: 4px;
-                                    background-color: #f2eb00;
-                                    border-radius: 2px;
-                                    position: absolute;
-                                    top: 10px;
-                                    left: 24px;
-                                  }
-                                  body.dark .titlesline {
-                                    filter: brightness(.7);
-                                  }
-                                  article .card .titlesline {
-                                    transition: all 0.36s ease;
-                                  }
-                                  article .card-image:hover .titlesline {
-                                    width: 36px;
-                                  }
-                                </style>
-                              </span>
-                              这是技术文章模板
-                            </span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前言，技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言。
-
-线性回归预测函数：
-
-h_{\theta}(x)=\theta^{T}x
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    技术
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E6%8A%80%E6%9C%AF/">
-                            <span class="chip bg-color">技术</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4">
-                <div class="card">
-                    <a href="/posts/articletemplate5.html" target="_blank">
-                        <div class="card-image tag-image">
-                            
-                            <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="逻辑回归LR、正则化和高级优化">
-                            
-                            
-                            <!-- 福袋按钮 -->
-                            <div class="caishendeng">        
-                                <div class="caishenxian fudaixian">
-                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
-                                </div>              
-                            </div>
-                            <!-- 圣诞按钮 -->
-                            <div class="shengdandeng">        
-                                <div class="shengdanxianyou">
-                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
-                                </div>              
-                            </div>
-
-                            <span class="card-title">
-                              <!-- 文章卡片hover线条效果 -->
-                              <span class="titlesline">
-                                <style>
-                                  .titlesline {
-                                    width: 0px;
-                                    height: 4px;
-                                    background-color: #f2eb00;
-                                    border-radius: 2px;
-                                    position: absolute;
-                                    top: 10px;
-                                    left: 24px;
-                                  }
-                                  body.dark .titlesline {
-                                    filter: brightness(.7);
-                                  }
-                                  article .card .titlesline {
-                                    transition: all 0.36s ease;
-                                  }
-                                  article .card-image:hover .titlesline {
-                                    width: 36px;
-                                  }
-                                </style>
-                              </span>
-                              逻辑回归LR、正则化和高级优化
-                            </span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                逻辑回归LR、正则化和高级优化
 
 线性回归预测函数：
 
@@ -1621,7 +1978,7 @@ $\displaystyle\sum{i=1}
             
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">14k</span>&nbsp;
+                class="white-color">29k</span>&nbsp;
             
             
             

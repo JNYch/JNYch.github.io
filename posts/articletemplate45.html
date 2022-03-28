@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ticktack, 这里是网站关键词">
+    <meta name="keywords" content="(writing...)从MLE到EM再到GMM、SMO, 这里是网站关键词">
     <meta name="description" content="这里是网站描述">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ticktack | itsNeko博客开源版</title>
+    <title>(writing...)从MLE到EM再到GMM、SMO | itsNeko博客开源版</title>
     
     <script>
         // 隐藏
@@ -891,366 +891,766 @@ class="themespring" -->
 </div>
 <!-- 春节主题模式样式结束 -->
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-        <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                    ticktack
-                 
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['欢迎使用itsNeko开源博客，也欢迎大家的赞赏',''],
-                        startDelay: 200,
-                        typeSpeed: 120,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/toc-banner/suibi1.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">(writing...)从MLE到EM再到GMM、SMO</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
-    </div>
-    <div class="mohuxiaoguo"></div>
-</div>
-
-
+<main class="post-container content">
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
-    /* .bg-cover {
-        background-image: url("/medias/banner/ticktackbg.jpg")!important;
-    } */
-    .bg-cover::before {
-        background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/grid.png);
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
     }
-    .card-content {
-        padding: 12px!important;
+
+    #articleContent :focus {
+        outline: none;
     }
-    hr {
-        margin: 8px auto 12px;
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+    .suibis[data-spmid="随笔"] {
+        width: 100%!important;
+    }
+    .toc-widget[data-spmid="随笔"],
+    #floating-toc-btn[data-spmid="随笔"]
+    {
+        display: none!important;
+    }
+     
+</style>
+
+<div class="row">
+    
+    
+        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="技术">
+            <style>
+    #switchspring {
+        bottom: 223px!important;
     }
     @media only screen and (max-width: 601px) {
         #switchspring {
             bottom: 178px!important;
         }
     }
-    .miaoshus {
-        padding: 12px;
-        border: 1px dashed #e6e6e6;
-        color: #969696;
-        position: relative;
-        display: inline-block;
-        width: 95%;
-        background: #fbfbfb50;
-        border-radius: 10px;
-        font-size: 16px;
-        margin: 12px auto;
+    #switchchristmas {
+        bottom: 281px!important;
     }
-    body.dark .miaoshus {
-        background: 0 0;
-        border: 1px dashed #888;
+    @media only screen and (max-width: 601px) {
+        #switchchristmas {
+            bottom: 235px!important;
+        }
     }
-    .wrap p {
-        font-family: 'Architects Daughter', cursive!important;
-        font-size: 18px!important;
-        margin: 15px auto!important;
-    }
-    .im0now {
-        color: #e96900;
-        font-size: 20px!important;
-    }
-    #switchspring {
-        bottom: 223px;
-    }
-    .HotDate {
-        color: #e96900;
-        font-size: 26px;
-        font-weight: 400;
-        text-align: center;
-        margin: 10px auto;
-    }
-    .biaotis {
-        margin: 10px auto;
-        text-align: center;
-    }
-    .biaotis span {
+    .ititle {
+        margin: 15px 0;
+        text-align:center;
         font-family: 'Architects Daughter', cursive;
-        font-size: 19px;
-        margin: 15px auto;
-        padding-bottom: 6px;
     }
-    body.dark .biaotis span {
-        color: rgba(255, 255, 255, 0.6);
+    .ipage {
+        line-height: 30px;
+        margin: 0 auto;
+        padding: 15px 32px 29px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+        -moz-border-radius-bottomleft: 20px 500px;
+        -moz-border-radius-bottomright: 500px 30px;
+        -moz-border-radius-topright: 5px 100px;	
+        -webkit-border-bottom-left-radius: 20px 500px;
+        -webkit-border-bottom-right-radius: 64px 10px;
+        -webkit-border-top-right-radius: 5px 100px;    
+        border-bottom-left-radius: 20px 500px;
+        border-bottom-right-radius: 64px 10px;
+        border-top-right-radius: 5px 100px;           
+        -webkit-background-size: 100% 30px;
+        -moz-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        text-shadow: 0 1px 0 #F6EF97;
+        position: relative;
     }
-    .biaotis .zhuti {
+.izhengwen {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: auto;
+    background: repeating-linear-gradient(to bottom, #f9f9f9, #f9f9f9 31px, #6BA2D8 1px, #f9f9f9);
+    background-size: 100% 32px;
+}
+.izhengwen p {
+    letter-spacing: .1rem;
+}
+#articleContent p {
+    margin: 0
+}
+.ititle {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.45rem!important;
+    padding: 10px auto;
+}
+.izhengwen p {
+    position: relative;
+    line-height: 2.2rem!important;
+    text-indent: 2em;
+    font-family: 'Architects Daughter', cursive!important;
+    font-size: 1.45rem!important;
+}
+.ipage::before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 52px;
+    z-index: 4;
+    width: 4px;
+    height: 100%;
+    border-left: 1px solid #fca1a1;
+}
+.izhengwen p:nth-child(odd):before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    z-index: 3;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+}
+.ipage:after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 52px;
+    z-index: 3;
+    width: 4px;
+    height: 100%;
+    border-left: 4px double #fca1a1;
+}
+.ipage p {
+    padding: 0 2em;
+    color: #333!important;
+}
+body.dark .ipage {
+    opacity: 0.85;
+}
+/*小屏幕下(手机类)的样式*/
+@media only screen and (max-width: 600px) {
+    .ipage {
+        padding: 15px 23px 29px;
+    }
+    .ipage:after {
+        left: 36px;
+    }
+    .ipage::before {
+        right: 36px;    
+    }
+    .ipage p, .ititle {
+        padding: 0 0.9em;
+    }
+
+}
+h3 {
+    font-size: 1.32rem;
+    font-weight: 400;
+    color: #101012;
+    transition: 0.8s;
+    cursor: pointer;
+}
+h3:hover {
+    transform: translateX(15px);
+}
+</style>
+
+<!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
         
-        border-bottom: 2px solid #e96900;
-    }
-</style>
-<style>
-    .shizhongcard {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .clock {
-      min-width: 250px;
-      width: 250px;
-      height: 250px;
-      margin-top: 18px;
-      background-color: white;
-      border: 15px solid white;
-      border-radius: 50%;
-      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1),
-        0 10px 10px rgba(0, 0, 0, 0.3), 0 0 0 4px white;
-      background-image: url("/medias/clock.png");
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .clock::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      position: absolute;
-      z-index: 999;
-      background-color: rgb(58, 58, 58);
-      border-radius: 50%;
-    }
-    .hour,
-    .min,
-    .sec {
-      position: absolute;
-    }
-    .hour,
-    .hr {
-      width: 130px;
-      height: 130px;
-    }
-    .min,
-    .mn {
-      width: 160px;
-      height: 160px;
-    }
-    .sec,
-    .sc {
-      width: 200px;
-      height: 200px;
-    }
-    .hr,
-    .mn,
-    .sc {
-      display: flex;
-      justify-content: center;
-      position: absolute;
-    }
-    .hr::before {
-      width: 5px;
-      height: 60px;
-      background-color: rgba(219, 0, 0, 0.808);
-      content: "";
-      border-radius: 6px 6px 0 0;
-    }
-    .mn::before {
-      width: 3px;
-      height: 80px;
-      background-color: rgb(0, 235, 125);
-      content: "";
-      border-radius: 6px 6px 0 0;
-    }
-    .sc::before {
-      width: 3px;
-      height: 120px;
-      background-color: rgb(0, 170, 248);
-      content: "";
-      border-radius: 6px;
-    }
-    .sc {
-      transition: linear 1s;
-    }
-    .mn {
-      transition: linear 0.1s;
-    }
-    .hr {
-      transition: linear 0.1s;
-    }
-</style>
-<main class="content">
-    <div class="container">
-        <div class="card">
+        <div class="card-content article-info">
             <!-- 福袋按钮 -->
             <div class="caishendeng">        
-                <div class="guguxian">
-                    <img class="caishenpic gugus" src="/medias/spring-img/shanzi.png" />
+                <div class="guguxian wenzhangxian">
+                    <img class="caishenpic gugus" src="/medias/spring-img/caishen.png" />
                 </div>              
             </div>
-            <div class="card-content">
-                <div class="tag-title center-align">
-                    <div class="miaoshus">
-                        <div class="title center-align">“ Ticktack 滴滴答答~ ”</div>
-                        “ 人生几何，九百月矣，深深的话，浅浅的说 ”                      
+            <!-- 圣诞按钮 -->
+            <div class="shengdandeng">        
+                <div class="shengdanxian" style="left: 50%;">
+                    <img class="shengdanpic fudai" src="/medias/christmas-img/shengdanren4.png" />
+                </div>              
+            </div>
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                                <span class="chip bg-color">技术</span>
+                            </a>
+                        
                     </div>
-                    <hr>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                技术
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
 
-                    <!-- 计算时间模块 -->
-                    <div class="wrap">
-                        <p>“ 人生只有 900 余月</p>
-                        <p>过去的，是回忆</p>
-                        <p>淡淡的约定，浅浅的留影 ”</p>
-                        <div><canvas class="myLife" width="300px" height="300px"></canvas></div>
-                        <p>“ 截至此刻，仅剩 '<span class="im0now"></span><span style="color: #e96900;font-size: 20px;">%</span>' 掌握在自己的手中</p>          
-                        <p>幸运和安逸还是留给后面的人生吧，我想趁着有梦，豁出一切。 ”</p>
-                        <script>
-                            var birthday=new Date(2001,10,4);
-                            var live=(new Date-birthday)/2592000000;
-                            var range=[0,live-1];
-                            for(var i=0;30>i;i++){
-                                for(var j=0;30>j;j++){
-                                    var current=30*i+j,
-                                    canvas=document.getElementsByClassName("myLife")[0],
-                                    ctx=canvas.getContext("2d");
-                                    current>=range[0]&&current<=range[1]?ctx.fillStyle="#ccc":ctx.fillStyle="#e96900",
-                                    ctx.fillRect(10*j+1,10*i+1,8,8),ctx.strokeStyle="#000",
-                                    ctx.lineWidth=1,
-                                    ctx.strokeRect(10*j,10*i,10,10)}}
-                                    setInterval(function(){if($("span").hasClass("im0now"))
-                                    {
-                                    document.getElementsByClassName("im0now")[0].innerHTML=(100-(new Date-birthday)/2592000000/9).toFixed(9)}}
-                                    ,300);   
-                        </script>
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-12-14
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.1k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    11 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <div class="note info">(writing...)从MLE到EM再到GMM、SMO</div>
+
+<h4 id="极大似然"><a href="#极大似然" class="headerlink" title=".极大似然"></a>.极大似然</h4><p>已知数据及分布，求模型和参数</p>
+<h5 id="1-1-例子"><a href="#1-1-例子" class="headerlink" title="1.1 例子"></a>1.1 例子</h5><blockquote>
+<p>在伯克利分布(二项分布中)</p>
+</blockquote>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\EM期望最大和GMM高斯混合模型.assets\image-20220308182040443.png" alt="image-20220308182040443" style="zoom:80%;"></p>
+<p>令$\part=0$，得到$\theta$的值</p>
+<p>求极大似然估计值的步骤</p>
+<ol>
+<li>写出似然函数</li>
+<li>对数似然</li>
+<li>求导，并令导数为0</li>
+<li>得到参数</li>
+</ol>
+<blockquote>
+<p>在均匀分布中</p>
+</blockquote>
+<p>X~U(0, a)，$L(a)=\frac{1}{a^n}$，此时如果用上述方法来求a是行不通的，-nln(a)导数为$\frac{a}$，令其=0无法得到结果</p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\EM期望最大和GMM高斯混合模型.assets\image-20220308193432622.png" alt="image-20220308193432622" style="zoom:80%;"></p>
+<p>假设我们有样本{$x_1,x_2,…,x_n$}，要使得$L(a)$最小，可以缩小a的范围，但是最小只能到已有样本的位置</p>
+<p>正态分布中得到的极大似然函数(即代价函数)<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\EM和GMM高斯混合模型.assets\image-20220309101309140.png" alt="image-20220309101309140" style="zoom:80%;"></p>
+<h4 id="2-EM"><a href="#2-EM" class="headerlink" title="2.EM"></a>2.EM</h4><p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309215525608.png" alt="image-20220309215525608" style="zoom:80%;"></p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309223352130.png" alt="image-20220309223352130" style="zoom:80%;"></p>
+<ol>
+<li>初始化分布模型的参数</li>
+<li>E步：计算在当前模型中，各batch的样本数据进行分类（当前样本判为各隐变量的概率，用概率密度计算）</li>
+<li>M步：根据batch样本计算出新的参数</li>
+<li>循环直至收敛</li>
+</ol>
+<p>EM求解的是概率模型中既含有<strong>观测变量</strong>，又含有<strong>隐变量</strong>或潜在变量的问题。EM算法就是含有隐变量的概率模型参数的极大似然估计法，或极大后验概率估计法。</p>
+<p>EM和极大似然估计的前提一样，都需要<strong>假设数据的分布</strong></p>
+<h5 id="2-1-例子"><a href="#2-1-例子" class="headerlink" title="2.1 例子"></a>2.1 例子</h5><blockquote>
+<p>一个观测变量，一个隐变量的情况</p>
+</blockquote>
+<p>假设我们想知道人群中吸大麻者的比例，敏感问题很难得到真实答案，当我们在其中增加一个观测变量（即已知概率分布，如手机尾号是否为偶数），将两者答案混在一起，则在样本足够多的情况下，我们可以根据答案的概率推算出吸大麻者的概率。</p>
+<blockquote>
+<p>两个隐变量的情况</p>
+</blockquote>
+<p>当我们对两个变量都不知道概率分布时（如人群中吸烟者和吸大麻者的比例），可以通过将两个问题随机发放给n个用户，只记录答案，不记录问题，这样就得到了很多不知归属的成组答案。</p>
+<p>然后为吸烟者比例和吸大麻者比例<strong>随机初始化</strong></p>
+<p>用估计的概率去推测这些答案属于两个问题的可能性，这是在估算未知变量的期望，因此被称为E-step</p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309171314038.png" alt="image-20220309171314038" style="zoom:80%;"> </p>
+<p>然后用这个期望去估计吸烟者和吸大麻者的概率，由于这个概率的可能性是最大的，所以被称为M-step</p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309171419318.png" alt="image-20220309171419318" style="zoom:80%;"></p>
+<p>得到新的概率后重新代入估计两个问题的可能性，循环往复得到收敛结果</p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309114857591.png" alt="image-20220309114857591" style="zoom:80%;"></p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309114835333.png" alt="image-20220309114835333" style="zoom:80%;"></p>
+<blockquote>
+<p>三硬币模型</p>
+</blockquote>
+<p>假设有3枚硬币A,B,C，硬币出现正面概率分别为$\pi,p和q$。进行如下抛硬币试验：先掷硬币A，根据结果再选择掷硬币B或硬币C（出现正面掷B，出现反面掷C）。（记正面为1，反面为0）</p>
+<p>该模型的概率分布为：<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309121449469.png" alt="image-20220309121449469" style="zoom:80%;"></p>
+<p>则对数似然为：<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309141621145.png" alt="image-20220309141621145"></p>
+<p>由于隐状态概率未知，所以该问题无法直接求解，只能通过迭代的方法求近似解。</p>
+<p>EM先初始化三个参数概率，记作$\theta_0=(\pi^{(0)},p^{(0)},q^{(0)})$，然后通过下面步骤迭代计算参数的估计值，直至收敛。</p>
+<p>记第$i$次迭代的参数估计值为$\theta_i=(\pi^{(i)},p^{(i)},q^{(i)})$</p>
+<p>第$i$次迭代如下：</p>
+<p>Expectation-step(期望)：计算在参数估计值$\pi^{(i)},p^{(i)},q^{(i)}$下观测数据$y_j$来自掷硬币B的概率（在该模型中掷C的概率就是$1-P(B)$）</p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309142629342.png" alt="image-20220309142629342">，即$\mu_j^{(i+1)}=\frac{P^{(i)}_j(B)}{P^{(i)}_j(A)+P^{(i)}_j(B)}$</p>
+<p>Maximization-step(极大似然估计)：计算模型参数的新估计值</p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309143441135.png" alt="image-20220309143441135">，<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309143638455.png" alt="image-20220309143638455">，<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309143704604.png" alt="image-20220309143704604"></p>
+<blockquote>
+<p>两硬币模型</p>
+</blockquote>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309173610880.png" alt="image-20220309173610880" style="zoom:80%;"></p>
+<p>假设有两枚硬币(A, B)，随机选择一枚掷n次（H表示正面，T表示反面）</p>
+<ol>
+<li><p>已知选择的情况，估计两个硬币出现正面的概率？（极大似然法）<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309174129095.png" alt="image-20220309174129095" style="zoom:80%;"></p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309173315754.png" alt="image-20220309173315754" style="zoom:80%;"></p>
+</li>
+<li><p>假设不知道选择情况，估计两枚硬币出现正面的概率？（EM算法）</p>
+<p>E步：$A的概率=\frac{硬币A和样本y_1的联合概率}{各隐参数和样本y_1的联合概率之和}$</p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309174249568.png" alt="image-20220309174249568" style="zoom:80%;"></p>
+<p>如：<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309175542507.png" alt="image-20220309175542507"></p>
+<p>计算得到A和B的出现概率后，该硬币的<strong>正反概率=次数 * 概率</strong>（如发生5正5反，硬币A出现正面的概率为0.45*5=2.25）</p>
+<p>M步：由上述求得的某个硬币对应的正反概率求对应的和<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309201705124.png" alt="image-20220309201705124" style="zoom:80%;"></p>
+<p>重新估计参数$\hat\theta$，$\hat\theta=\frac{P(H|A)}{P(A)}$</p>
+</li>
+</ol>
+<blockquote>
+<p>假设已知有200人的身高，但不知道男女比例，求男女比例</p>
+</blockquote>
+<p>学生性别属于隐参数，身高分布属于模型参数</p>
+<ol>
+<li>假设男生的身高分布为N($\mu=172,\sigma^2=5^2$)，女生的身高分布为N($\mu=162,\sigma^2=5^2$)</li>
+<li>根据样本数据中的身高进行期望概率估计（如身高180，则极大可能为男生）&lt;—E步</li>
+<li>按E步得到的概率将样本数据分为男生和女生，然后根据数据求解参数的极大似然值&lt;—M步</li>
+<li>将M步得到的参数代入E步迭代，循环往复，直到参数收敛（实现效果有点类似于梯度下降）</li>
+</ol>
+<h5 id="2-2-总结"><a href="#2-2-总结" class="headerlink" title="2.2 总结"></a>2.2 总结</h5><p>最直观了解EM算法的思路是K-Means算法。在K-Means聚类时，每个聚类簇的质心是隐含参数，假设初始化质心为K个，即E步；然后计算得到每个样本最近的质心，并把样本聚类到最近的这个质心，即M步，重复EM，直到质心不再变化，这就完成了K-Means聚类。</p>
+<h4 id="3-EM算法推导"><a href="#3-EM算法推导" class="headerlink" title="3.EM算法推导"></a>3.EM算法推导</h4><h5 id="3-1-凸函数-convex"><a href="#3-1-凸函数-convex" class="headerlink" title="3.1 凸函数(convex)"></a>3.1 凸函数(convex)</h5><ul>
+<li>在实数域上的函数，如果对于任意实数都有$f’’≥0$则该函数为凸函数</li>
+<li>如果不是单个实数，而是实数组成的向量，如果函数的Hesse矩阵是半定的，即$H’’≥0$，则该函数为凸函数</li>
+</ul>
+<p>特别的，如果函数$f’’&gt;0$或者$H’’&gt;0$则该函数被称为严格凸函数</p>
+<h5 id="3-2-Jensen不等式"><a href="#3-2-Jensen不等式" class="headerlink" title="3.2 Jensen不等式"></a>3.2 Jensen不等式</h5><p>如果函数$f$是凸函数，X服从二项分布，x的期望就是a和b的中值，则有$E[f(x)]≥f(E(x))$，其中$E[f(x)]=0.5f(a)+0.5f(b)$，$f(E(x))=f(0.5a+0.5b)$</p>
+<p>图像为：<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309165129970.png" alt="image-20220309165129970" style="zoom:80%;"></p>
+<p>得到<code>Jensen</code>不等式：</p>
+<ul>
+<li><p>对于凸函数，有：</p>
+<p>$\phi(E[f(x)]) \le E[\phi(f(x))]$，即$f(\displaystyle\sum<em>{i=1}^M\lambda_ix_i) \le \displaystyle\sum</em>{i=1}^M\lambda_if(x_i)$</p>
+</li>
+<li><p>对于凹函数(concave)，有相反的结论：</p>
+<p>$\phi(E[f(x)]) \ge E[\phi(f(x))]$</p>
+</li>
+</ul>
+<p>可以由<code>Jensen</code>不等式的结论推出：信息论中的KL散度恒大于0的吉布斯不等式</p>
+<p>即：<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309164419295.png" alt="image-20220309164419295"></p>
+<p>当代码是基于真实概率p分布时，平均消息长度被最小化</p>
+<h5 id="3-3-期望"><a href="#3-3-期望" class="headerlink" title="3.3 期望"></a>3.3 期望</h5><p>对于离散型样本X的概率分布$p_i=p{X=x_i}$，数学期望$E(X)$为$E(X)=\displaystyle\sum_ix_ip_i$</p>
+<p>对于连续型样本X的概率密度为$f(x)$，则期望为：$E(X)=\int xf(x)dx$</p>
+<h5 id="3-4-EM推导"><a href="#3-4-EM推导" class="headerlink" title="3.4 EM推导"></a>3.4 EM推导</h5><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/36331115">EM算法-知乎</a></p>
+<h5 id="3-5-坐标下降法到EM算法和SMO算法"><a href="#3-5-坐标下降法到EM算法和SMO算法" class="headerlink" title="3.5 坐标下降法到EM算法和SMO算法"></a>3.5 坐标下降法到EM算法和SMO算法</h5><p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309213256015.png" alt="image-20220309213256015" style="zoom:67%;"></p>
+<ul>
+<li>坐标下降法(上升法)：每次只选择一个维度，将原始问题变成一元函数，然后对这个一元函数求极值，如此反复<strong>轮换不同维度进行迭代</strong>。主要应用包括<strong>EM算法</strong>和<strong>SMO算法</strong></li>
+<li>EM：是两个参数迭代的坐标上升问题，特点是两个维度轮换迭代（上图为EM的梯度图）</li>
+<li>SMO：是<strong>m-1维</strong>(m表示样本量)的<strong>坐标下降问题</strong>，难点在于<strong>选择哪个坐标作为下一个循环的迭代</strong>，同时还需要<strong>对求导得到的变量值进行约束条件限制</strong></li>
+</ul>
+<blockquote>
+<p>EM为什么能近似实现对观测数据的极大似然估计呢？</p>
+</blockquote>
+<p>EM算法是通过不断求解<strong>下界的极大化</strong>逼近求解<strong>对数似然函数极大化</strong>的算法</p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309203813238.png" alt="image-20220309203813238" style="zoom:80%;">（9.14）</p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309203742620.png" alt="image-20220309203742620" style="zoom:80%;"></p>
+<h5 id="3-6-EM的收敛性"><a href="#3-6-EM的收敛性" class="headerlink" title="3.6 EM的收敛性"></a>3.6 EM的收敛性</h5><p>概率分布为：</p>
+<script type="math/tex; mode=display">
+P(X|\theta)=\frac{P(X,Z|\theta)}{P(Z|X,\theta)}</script><p>其中Z为隐变量，取对数后有：</p>
+<script type="math/tex; mode=display">
+logP(X|\theta)=logP(X,Z|\theta)-logP(Z|X,\theta)</script><p>令<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从MLE到EM再到GMM、SMO.assets\image-20220315215838600.png" alt="image-20220315215838600" style="zoom:80%;"><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从MLE到EM再到GMM、SMO.assets\image-20220315215908514.png" alt="image-20220315215908514" style="zoom:80%;"></p>
+<p>即：<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从MLE到EM再到GMM、SMO.assets\image-20220315220050102.png" alt="image-20220315220050102" style="zoom:80%;"></p>
+<p>证明EM的收敛性，即证明$\theta^{j+1}-\theta^j \ge 0$，即证明：$P(X|\theta^{j+1})-P(X|\theta^j)=L(\theta^{j+1},\theta^{j})-L(\theta^{j},\theta^{j})+H(\theta^{j+1},\theta^{j})-H(\theta^{j},\theta^{j})$</p>
+<p>由于极大似然，$\theta^{j+1}$使$L(\theta,\theta^{j})$达到极大，所以$L(\theta^{j+1},\theta^{j})-L(\theta^{j},\theta^{j})\ge0$</p>
+<p>所以只需分析熵函数H在$\theta^{j+1}$和$\theta^j$的情况即可：</p>
+<p>根据<code>jensen</code>不等式<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从MLE到EM再到GMM、SMO.assets\image-20220316122443640.png" alt="image-20220316122443640" style="zoom:80%;"></p>
+<p>所以<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从MLE到EM再到GMM、SMO.assets\image-20220316122524455.png" alt="image-20220316122524455" style="zoom:80%;">是可以收敛的，即EM算法可以收敛，但对于<strong>非凸函数，只能收敛到局部最优</strong>。</p>
+<h4 id="4-EM和SVM中的SMO-序列最小优化"><a href="#4-EM和SVM中的SMO-序列最小优化" class="headerlink" title="4.EM和SVM中的SMO(序列最小优化)"></a>4.EM和SVM中的SMO(序列最小优化)</h4><p>更新中</p>
+<h4 id="5-EM和GMM"><a href="#5-EM和GMM" class="headerlink" title="5.EM和GMM"></a>5.EM和GMM</h4><p>GMM的初始化需要设置均值和标准差，最朴素的方法是把它们设置为数据集本身的平均值，聚类结果是圆形；更优的方式是使用由<strong>k-means生成的聚类</strong>来初始化高斯分布，聚类结果是椭圆形且可旋转；最好不要使用随机选择均值和方差</p>
+<p>计算GMM参数的方式和EM的基本一样</p>
+<ol>
+<li>初始化$\mu$和$\sigma$</li>
+<li>E步：计算聚簇分类概率</li>
+<li>M步：根据样本和分类概率计算新的参数</li>
+<li>评估对数似然<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从MLE到EM再到GMM、SMO.assets\image-20220310095208856.png" alt="image-20220310095208856" style="zoom: 67%;"></li>
+</ol>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309215525608.png" alt="image-20220309215525608" style="zoom:80%;"></p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从极大似然到EM以及GMM高斯混合模型.assets\image-20220309223412714.png" alt="image-20220309223412714" style="zoom:80%;"></p>
+<pre class=" language-lang-python"><code class="language-lang-python">form sklearn import datasets, mixture
+
+X = datasets.load_iris().data[:10]
+gmm = mixture.GaussianMixture(n_components=3)
+
+gmm.fit(X)
+clustering = gmm.predict(X)
+</code></pre>
+<h5 id="5-1-GMM的优缺点"><a href="#5-1-GMM的优缺点" class="headerlink" title="5.1 GMM的优缺点"></a>5.1 GMM的优缺点</h5><h6 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h6><ul>
+<li>软聚类算法，多个聚类隶属度</li>
+<li>聚类形状灵活</li>
+</ul>
+<h6 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h6><ul>
+<li>对初始化值敏感</li>
+<li>可能收敛到局部最优</li>
+<li>收敛速度慢</li>
+</ul>
+<h5 id="5-2-GMM的应用"><a href="#5-2-GMM的应用" class="headerlink" title="5.2 GMM的应用"></a>5.2 GMM的应用</h5><ul>
+<li>分离前后背景（人像去除，背景去除）</li>
+<li>分离混合的数据（星座、成绩）</li>
+<li>分析卫星图得到出行高峰和交通方式（将已有数据用PCA等算法选取有用特征，然后通过聚类转化为知识和信息）<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从MLE到EM再到GMM、SMO.assets\image-20220310103735445.png" alt="image-20220310103735445" style="zoom:67%;"></li>
+<li>识别指纹和其他类别的生物识别</li>
+</ul>
+<h5 id="5-3-聚类评价指数-categories-of-cluster-validation-indices"><a href="#5-3-聚类评价指数-categories-of-cluster-validation-indices" class="headerlink" title="5.3 聚类评价指数(categories of cluster validation indices)"></a>5.3 聚类评价指数(categories of cluster validation indices)</h5><ul>
+<li><p>外部(external)指标：处理有标签数据时使用的评分指标</p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从MLE到EM再到GMM、SMO.assets\image-20220310105814990.png" alt="image-20220310105814990" style="zoom:80%;"></p>
+</li>
+<li><p>内部(internal)指标：无监督学习时，用数据衡量数据和结构之间的吻合度</p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从MLE到EM再到GMM、SMO.assets\image-20220310112410908.png" alt="image-20220310112410908" style="zoom:80%;"></p>
+</li>
+<li><p>相对(relative)指标：两个聚类结构哪一个在某种意义上更好（所有的外部指标都可以作为相对指标）</p>
+</li>
+</ul>
+<p>大多数评价指标是通过紧凑性(compactness)和可分性(separability)来定义的，紧凑性用来衡量一个聚类中元素彼此之间的距离，可分性表示不同距离之间的距离</p>
+<h5 id="5-4-外部指标-兰德系数-Adjusted-Rand-Score"><a href="#5-4-外部指标-兰德系数-Adjusted-Rand-Score" class="headerlink" title="5.4 外部指标-兰德系数(Adjusted Rand Score)"></a>5.4 外部指标-兰德系数(Adjusted Rand Score)</h5><p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从MLE到EM再到GMM、SMO.assets\image-20220310110455030.png" alt="image-20220310110455030" style="zoom:80%;"></p>
+<p>n表示样本数，a表示正确聚类的簇数(k中两簇都是正确聚类)，b表示在正确聚类的样本点到其他簇中的样本点的对数(k中有四个点是在正确聚类中且聚类正确的，两粉两青)</p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从MLE到EM再到GMM、SMO.assets\image-20220310112259951.png" alt="image-20220310112259951" style="zoom:80%;"></p>
+<h5 id="5-5-内部指标-轮廓系数-Silhouette-index"><a href="#5-5-内部指标-轮廓系数-Silhouette-index" class="headerlink" title="5.5 内部指标-轮廓系数(Silhouette index)"></a>5.5 内部指标-轮廓系数(Silhouette index)<img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从MLE到EM再到GMM、SMO.assets\image-20220310113109972.png" alt="image-20220310113109972" style="zoom:80%;"></h5><p>a是<strong>簇内不相似度</strong>，也就是同一个聚类中样本i到其他样本的平均距离(蓝色实线)，簇内所有样本的$a_i$均值称为簇的簇内不相似度，样本i的到簇内样本的均值$a_i$称为样本i的簇内不相似度；b是<strong>簇间不相似度</strong>，也就是样本i到不同聚类到样本的最近平均距离(即黄色实线)，$b_i$越大说明样本i越不属于其他簇。</p>
+<p>在不同聚类方法中的表现</p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从MLE到EM再到GMM、SMO.assets\image-20220310114255667.png" alt="image-20220310114255667" style="zoom:80%;"></p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从MLE到EM再到GMM、SMO.assets\image-20220310120705336.png" alt="image-20220310120705336" style="zoom:80%;"></p>
+<p><img src="/posts/articletemplate45.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\吴恩达机器学习\从MLE到EM再到GMM、SMO.assets\image-20220310121245467.png" alt="image-20220310121245467" style="zoom:80%;"></p>
+<p>对于<strong>簇结构为凸</strong>的数据轮廓系数值高，而对于<strong>簇结构非凸</strong>需要使用DBSCAN进行聚类的数据，轮廓系数值低，因此，<strong>轮廓系数不应该用来评估不同聚类算法之间的优劣</strong>，比如K-means聚类结果与DBSCAN聚类结果之间的比较，通常情况下，我们<strong>不会使用轮廓系数来评估DBSCAN</strong>，据说DBCV用来评估DBSCAN效果很好。</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">itsNeko博客开源版</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://jnych.github.io/posts/articletemplate45.html">https://jnych.github.io/posts/articletemplate45.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">itsNeko博客开源版</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                                    <span class="chip bg-color">技术</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢赞赏哦~</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
         </div>
-      
-        <!-- 倒计时 -->
-        <div class="card">
-             <!-- 时钟盘 -->
-            <div class="card-content shizhongcard">
-                <div class="clock">
-                    <div class="hour">
-                      <div class="hr"></div>
-                    </div>
-                    <div class="min">
-                      <div class="mn"></div>
-                    </div>
-                    <div class="sec">
-                      <div class="sc"></div>
-                    </div>
-                </div>
-                <script>
-                    // 获取几个时钟的dom
-                    var hr = document.querySelector(".hr");
-                    var mn = document.querySelector(".mn");
-                    var sc = document.querySelector(".sc");
-                    var time = document.querySelector(".time_wrap1");
-                    //根据当前时间初始化表盘时钟
-                    var date = new Date();
-                    var hour = date.getHours();
-                    var min = date.getMinutes();
-                    var sec = date.getSeconds();
-                    var i = sec;
-                    setInterval(() => {
-                      hour = date.getHours();
-                      hr.style.transform = `rotateZ(${hour * 30 + min / 2}deg)`;
-                      mn.style.transform = `rotateZ(${min * 6}deg)`;
-                      sc.style.transform = `rotateZ(${sec * 6}deg)`;
-              
-                      i++;
-                      min = min + parseInt(i / 60);
-                      sec++;
-                      if (i === 60) i = 0;
-              
-                      var startTime = new Date("2019-9-1"); // 开始时间
-                      var endTime = new Date(); // 结束时间
-                      var usedTime = endTime - startTime; // 相差的毫秒数
-                      var days = Math.floor(usedTime / (24 * 3600 * 1000)); // 计算出天数
-                      var leavel = usedTime % (24 * 3600 * 1000); // 计算天数后剩余的时间
-                      var hours = Math.floor(leavel / (3600 * 1000)); // 计算剩余的小时数
-                      var leavel2 = leavel % (3600 * 1000); // 计算剩余小时后剩余的毫秒数
-                      var minutes = Math.floor(leavel2 / (60 * 1000)); // 计算剩余的分钟数
-                      var level3 = leavel2 - minutes * 60 * 1000;
-                      var seconds = Math.floor(level3 / 1000);
-                    }, 1000);
-                </script>
-            </div>
-            <!-- 倒计时模块 -->
-            <div class="card-content">
-                <div class="biaotis">
-                    <span>距离</span>
-                    <span class="zhuti">2022</span>
-                    <span>仅有</span>
-                </div>
-                <div id="CountMsg" class="HotDate">
-                    <span id="t_d">00天</span>
-                    <span id="t_h">00时</span>
-                    <span id="t_m">00分</span>
-                    <span id="t_s">00秒</span>
-                </div>
-                <script type="text/javascript">
-                function getRTime(){
-                var EndTime = new Date('2022/01/01 00:00:00'); //截止时间
-                var NowTime = new Date();
-                var t = EndTime.getTime() - NowTime.getTime();
+    </div>
+</div>
 
-                //累减
-                // var d=Math.floor(t/1000/60/60/24);
-                // t-=d*(1000*60*60*24);
-                // var h=Math.floor(t/1000/60/60);
-                // t-=h*60*60*1000;
-                // var m=Math.floor(t/1000/60);
-                // t-=m*60*1000;
-                // var s=Math.floor(t/1000);
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
 
-                //累加
-                var d=Math.floor(t/1000/60/60/24);
-                var h=Math.floor(t/1000/60/60%24);
-                var m=Math.floor(t/1000/60%60);
-                var s=Math.floor(t/1000%60);
-
-                document.getElementById("t_d").innerHTML = d + "天";
-                document.getElementById("t_h").innerHTML = h + "时";
-                document.getElementById("t_m").innerHTML = m + "分";
-                document.getElementById("t_s").innerHTML = s + "秒";
-                }
-                setInterval(getRTime,1000);
-                </script>
-      
-            </div>
+            
         </div>
-        <!-- 评论模块 -->
-        <div class="card">
-            
+    </div>
 
-            
+    
 
-            
+    
 
-            
+    
 
-            
-            <style>
+    
+
+    
+        <style>
     .valine-card {
         margin: 1.5rem auto;
     }
@@ -1614,12 +2014,320 @@ class="themespring" -->
     });
 </script>
 
-            
-			
-			
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/articletemplate3.html">
+                    <div class="card-image">
+                        
+                        <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="线性回归、代价函数和梯度下降">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          线性回归、代价函数和梯度下降
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            线性回归、代价函数和梯度下降法
+
+线性回归预测函数：
+
+h_{\theta}(x)=\theta^{T}x逻辑回归预测函数：
+
+h_{\theta}^{(x)}=\frac{1}{1+e^{-\theta^{T}x}}线性回归损失函数：
+
+
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                        <span class="chip bg-color">技术</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
         </div>
+        
+        
+        <div class="article col s12 m6">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/articletemplate21.html">
+                    <div class="card-image">
+                        
+                        <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="(now!)NLP发展到Transformer相关及改进模型">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          (now!)NLP发展到Transformer相关及改进模型
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            (now!)NLP发展到Transformer相关及改进模型
+
+0. NLP0.1 发展https://www.jianshu.com/p/d35a2fd593eb
+0.2 训练流程1. RNN和LSTM
+单词的先后顺序会影响句子的意思，R
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                        <span class="chip bg-color">技术</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
     </div>
+</article>
+<style>
+  .articles .row .article {
+    position: relative;
+  }
+</style>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('30')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: itsNeko博客开源版<br />'
+            + '文章作者: itsNeko博客开源版<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+        </div>
+        
+        
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        
+        
+        <div class="toc-widget" data-spmid="技术">
+            <div class="toc-title">
+                <i class="far fa-list-alt"></i>
+                &nbsp;&nbsp;目录
+            </div>
+            <div id="toc-content"></div>
+        </div>
+        
+        
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+    
+<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="技术">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
 </main>
+
+
 
 
     <style>
