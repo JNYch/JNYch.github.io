@@ -3,11 +3,11 @@
   <title>itsNeko博客开源版</title>
   
   
-  <link href="https://www.baidu.com/atom.xml" rel="self"/>
+  <link href="https://jnych.github.io/atom.xml" rel="self"/>
   
-  <link href="https://www.baidu.com/"/>
+  <link href="https://jnych.github.io/"/>
   <updated>2022-01-03T02:33:59.957Z</updated>
-  <id>https://www.baidu.com/</id>
+  <id>https://jnych.github.io/</id>
   
   <author>
     <name>itsNeko博客开源版</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>关于itsNeko开源博客食用方法</title>
-    <link href="https://www.baidu.com/posts/itsneko-opensource-blog.html"/>
-    <id>https://www.baidu.com/posts/itsneko-opensource-blog.html</id>
+    <link href="https://jnych.github.io/posts/itsneko-opensource-blog.html"/>
+    <id>https://jnych.github.io/posts/itsneko-opensource-blog.html</id>
     <published>2021-12-15T16:34:14.000Z</published>
     <updated>2022-01-03T02:33:59.957Z</updated>
     
@@ -34,17 +34,17 @@
     
     
     
-    <category term="itsNeko博客食用方法" scheme="https://www.baidu.com/categories/itsNeko%E5%8D%9A%E5%AE%A2%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <category term="itsNeko博客食用方法" scheme="https://jnych.github.io/categories/itsNeko%E5%8D%9A%E5%AE%A2%E9%A3%9F%E7%94%A8%E6%96%B9%E6%B3%95/"/>
     
     
-    <category term="关于itsNeko开源博客" scheme="https://www.baidu.com/tags/%E5%85%B3%E4%BA%8EitsNeko%E5%BC%80%E6%BA%90%E5%8D%9A%E5%AE%A2/"/>
+    <category term="关于itsNeko开源博客" scheme="https://jnych.github.io/tags/%E5%85%B3%E4%BA%8EitsNeko%E5%BC%80%E6%BA%90%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>这是技术文章模板</title>
-    <link href="https://www.baidu.com/posts/articletemplate.html"/>
-    <id>https://www.baidu.com/posts/articletemplate.html</id>
+    <link href="https://jnych.github.io/posts/articletemplate.html"/>
+    <id>https://jnych.github.io/posts/articletemplate.html</id>
     <published>2021-12-13T16:34:14.000Z</published>
     <updated>2022-01-03T02:33:59.957Z</updated>
     
@@ -59,17 +59,183 @@
     
     
     
-    <category term="技术" scheme="https://www.baidu.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://jnych.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="技术" scheme="https://www.baidu.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://jnych.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript基础</title>
+    <link href="https://jnych.github.io/posts/cfea.html"/>
+    <id>https://jnych.github.io/posts/cfea.html</id>
+    <published>2021-11-15T11:52:10.000Z</published>
+    <updated>2022-03-26T02:56:43.559Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;JavaScript&quot;&gt;&lt;a href=&quot;#JavaScript&quot; class=&quot;headerlink&quot; title=&quot;JavaScript&quot;&gt;&lt;/a&gt;JavaScript&lt;/h1&gt;&lt;h2 id=&quot;js书写位置&quot;&gt;&lt;a href=&quot;#js书写位置&quot; class=&quot;headerlink&quot; title=&quot;js书写位置&quot;&gt;&lt;/a&gt;js书写位置&lt;/h2&gt;&lt;h3 id=&quot;行内式-直接把代码书写在标签身上-强烈不推荐&quot;&gt;&lt;a href=&quot;#行内式-直接把代码书写在标签身上-强烈不推荐&quot; class=&quot;headerlink&quot; title=&quot;行内式-直接把代码书写在标签身上(强烈不推荐)&quot;&gt;&lt;/a&gt;行内式-直接把代码书写在标签身上(强烈不推荐)&lt;/h3&gt;</summary>
+    
+    
+    
+    
+    <category term="JS" scheme="https://jnych.github.io/tags/JS/"/>
+    
+    <category term="JavaScript" scheme="https://jnych.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>bootstrap入门</title>
+    <link href="https://jnych.github.io/posts/fec3.html"/>
+    <id>https://jnych.github.io/posts/fec3.html</id>
+    <published>2021-11-15T03:17:30.000Z</published>
+    <updated>2021-11-15T12:13:09.356Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;bootstrap&quot;&gt;&lt;a href=&quot;#bootstrap&quot; class=&quot;headerlink&quot; title=&quot;bootstrap&quot;&gt;&lt;/a&gt;bootstrap&lt;/h1&gt;&lt;h2 id=&quot;布局容器&quot;&gt;&lt;a href=&quot;#布局容器&quot; class=&quot;headerlink&quot; title=&quot;布局容器&quot;&gt;&lt;/a&gt;布局容器&lt;/h2&gt;&lt;p&gt;1、.container 类用于固定宽度并支持响应式布局的容器(版心)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-html&quot;&gt; &amp;lt;!-- 固定宽度 --&amp;gt;
+&amp;lt;div class=&amp;quot;container&amp;quot; style=&amp;quot;background-color: wheat; height: 300px;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;​    2、.container-fluid类用于100% 宽度，占据全部视口（viewport）的容器。(通栏)&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="bootstrap" scheme="https://jnych.github.io/tags/bootstrap/"/>
+    
+    <category term="响应式" scheme="https://jnych.github.io/tags/%E5%93%8D%E5%BA%94%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>butterfly主题美化</title>
+    <link href="https://jnych.github.io/posts/6e23.html"/>
+    <id>https://jnych.github.io/posts/6e23.html</id>
+    <published>2021-11-14T06:59:29.000Z</published>
+    <updated>2022-03-26T03:07:06.072Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;butterly&quot;&gt;&lt;a href=&quot;#butterly&quot; class=&quot;headerlink&quot; title=&quot;butterly&quot;&gt;&lt;/a&gt;butterly&lt;/h1&gt;&lt;h2 id=&quot;PC端展示（白天-夜晚）&quot;&gt;&lt;a href=&quot;#PC端展示（白天-夜晚）&quot; class=&quot;headerlink&quot; title=&quot;PC端展示（白天/夜晚）&quot;&gt;&lt;/a&gt;PC端展示（白天/夜晚）&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/jnylife/ImgHosting/img/GIF%202021-11-14%2015-27-17.gif&quot; alt&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>flex弹性布局</title>
+    <link href="https://jnych.github.io/posts/81f5.html"/>
+    <id>https://jnych.github.io/posts/81f5.html</id>
+    <published>2021-11-10T11:52:59.000Z</published>
+    <updated>2022-03-26T03:05:41.252Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Flex弹性布局&quot;&gt;&lt;a href=&quot;#Flex弹性布局&quot; class=&quot;headerlink&quot; title=&quot;Flex弹性布局&quot;&gt;&lt;/a&gt;Flex弹性布局&lt;/h1&gt;&lt;h2 id=&quot;flex-direction&quot;&gt;&lt;a href=&quot;#flex-direction&quot; class=&quot;headerlink&quot; title=&quot;flex-direction&quot;&gt;&lt;/a&gt;flex-direction&lt;/h2&gt;&lt;p&gt;取值：row(默认) | row-reverse | column | column-reverse&lt;/p&gt;
+&lt;p&gt;用于控制项目排列方向与顺序，默认row，即横向排列，项目排列顺序为正序1-2-3；row-reverse同为横向排列，但项目顺序为倒序3-2-1。&lt;/p&gt;
+&lt;p&gt;column 与row相反，为纵向排列，项目顺序为正序1-2-3，column-reverse同为纵向排列，项目顺序为倒序3-2-1。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CSS3</title>
+    <link href="https://jnych.github.io/posts/7099.html"/>
+    <id>https://jnych.github.io/posts/7099.html</id>
+    <published>2021-10-30T10:13:28.000Z</published>
+    <updated>2021-11-11T05:26:50.728Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;CSS3&quot;&gt;&lt;a href=&quot;#CSS3&quot; class=&quot;headerlink&quot; title=&quot;CSS3&quot;&gt;&lt;/a&gt;CSS3&lt;/h1&gt;&lt;h2 id=&quot;浏览器内核&quot;&gt;&lt;a href=&quot;#浏览器内核&quot; class=&quot;headerlink&quot; title=&quot;浏览器内核&quot;&gt;&lt;/a&gt;浏览器内核&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/posts/7099.htm/a.jpg&quot; style=&quot;zoom:80%;&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="CSS3" scheme="https://jnych.github.io/tags/CSS3/"/>
+    
+    <category term="animation" scheme="https://jnych.github.io/tags/animation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>html5</title>
+    <link href="https://jnych.github.io/posts/f306.html"/>
+    <id>https://jnych.github.io/posts/f306.html</id>
+    <published>2021-10-28T01:29:30.000Z</published>
+    <updated>2021-10-30T10:13:33.705Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;html&quot;&gt;&lt;a href=&quot;#html&quot; class=&quot;headerlink&quot; title=&quot;html&quot;&gt;&lt;/a&gt;html&lt;/h1&gt;&lt;h3 id=&quot;strong与b、em与i&quot;&gt;&lt;a href=&quot;#strong与b、em与i&quot; class=&quot;headerlink&quot; title=&quot;strong与b、em与i&quot;&gt;&lt;/a&gt;strong与b、em与i&lt;/h3&gt;&lt;p&gt;表现形态都是 文本加粗  和  文本斜体&lt;/p&gt;
+&lt;p&gt;区别：是否具备语义化&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="h5" scheme="https://jnych.github.io/tags/h5/"/>
+    
+    <category term="html" scheme="https://jnych.github.io/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS</title>
+    <link href="https://jnych.github.io/posts/198d.html"/>
+    <id>https://jnych.github.io/posts/198d.html</id>
+    <published>2021-10-16T05:24:01.000Z</published>
+    <updated>2021-11-06T02:54:29.617Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot; title=&quot;CSS&quot;&gt;&lt;/a&gt;CSS&lt;/h1&gt;&lt;h2 id=&quot;CSS背景样式&quot;&gt;&lt;a href=&quot;#CSS背景样式&quot; class=&quot;headerlink&quot; title=&quot;CSS背景样式&quot;&gt;&lt;/a&gt;CSS背景样式&lt;/h2&gt;&lt;p&gt;background-repeat 平铺方式&lt;/p&gt;
+&lt;p&gt;​    默认：会水平垂直都铺满背景图&lt;/p&gt;
+&lt;p&gt;​    repeat-x   x轴平铺&lt;br&gt;​    repeat-y   y轴平铺&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="CSS" scheme="https://jnych.github.io/tags/CSS/"/>
+    
+    <category term="BFC" scheme="https://jnych.github.io/tags/BFC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>盒子模型</title>
+    <link href="https://jnych.github.io/posts/ac8.html"/>
+    <id>https://jnych.github.io/posts/ac8.html</id>
+    <published>2021-10-13T11:57:39.000Z</published>
+    <updated>2021-10-28T01:30:54.314Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;盒子模型&quot;&gt;&lt;a href=&quot;#盒子模型&quot; class=&quot;headerlink&quot; title=&quot;盒子模型:&quot;&gt;&lt;/a&gt;盒子模型:&lt;/h1&gt;&lt;p&gt;在html文档中，margin和padding属性是盒子模型的组成部分，正确理解这两个属性也是学习用css布局的关键。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="盒子" scheme="https://jnych.github.io/tags/%E7%9B%92%E5%AD%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>helloworld</title>
+    <link href="https://jnych.github.io/posts/cdd3.html"/>
+    <id>https://jnych.github.io/posts/cdd3.html</id>
+    <published>2021-10-12T05:51:37.000Z</published>
+    <updated>2021-11-04T10:24:10.229Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;大家好，我是陈浩，这是我的新博客，以后我将在这里分享我的前端学习。&lt;br&gt;&lt;/p&gt;</summary>
+    
+    
+    
     
   </entry>
   
   <entry>
     <title>这是随笔文章模板</title>
-    <link href="https://www.baidu.com/posts/essay-demo.html"/>
-    <id>https://www.baidu.com/posts/essay-demo.html</id>
+    <link href="https://jnych.github.io/posts/essay-demo.html"/>
+    <id>https://jnych.github.io/posts/essay-demo.html</id>
     <published>2020-01-03T16:34:14.000Z</published>
     <updated>2022-01-03T02:33:59.957Z</updated>
     
@@ -84,10 +250,10 @@
     
     
     
-    <category term="随笔" scheme="https://www.baidu.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://jnych.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="随笔" scheme="https://www.baidu.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://jnych.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
