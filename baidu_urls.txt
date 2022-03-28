@@ -1,8 +1,8 @@
 https://jnych.github.io/posts/articletemplate5.html
 https://jnych.github.io/posts/articletemplate6.html
+https://jnych.github.io/posts/articletemplate21.html
 https://jnych.github.io/posts/itsneko-opensource-blog.html
 https://jnych.github.io/posts/articletemplate45.html
-https://jnych.github.io/posts/articletemplate21.html
 https://jnych.github.io/posts/articletemplate66.html
 https://jnych.github.io/posts/articletemplate8.html
 https://jnych.github.io/posts/articletemplate4.html
@@ -12,4 +12,4 @@ https://jnych.github.io/posts/articletemplate445.html
 https://jnych.github.io/posts/articletemplate2.html
 https://jnych.github.io/posts/articletemplate3.html
 https://jnych.github.io/posts/articletemplate444.html
-https://jnych.github.io/posts/articletemplate.html
+https://jnych.github.io/posts/articletemplate564.html

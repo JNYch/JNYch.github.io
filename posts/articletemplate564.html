@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="这是技术文章模板, 这里是网站关键词">
+    <meta name="keywords" content="两个链表的第一个公共节点, 这里是网站关键词">
     <meta name="description" content="这里是网站描述">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>这是技术文章模板 | itsNeko博客开源版</title>
+    <title>两个链表的第一个公共节点 | itsNeko博客开源版</title>
     
     <script>
         // 隐藏
@@ -900,7 +900,7 @@ class="themespring" -->
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">这是技术文章模板</h1>
+                    <h1 class="description center-align post-title">两个链表的第一个公共节点</h1>
                 </div>
             </div>
         </div>
@@ -1219,14 +1219,14 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    251
+                    841
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -1236,18 +1236,76 @@ h3:hover {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <div class="note info">前言，技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言。</div>
+                <div class="note info">两个链表的第一个公共节点</div>
 
-<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><ul>
-<li>项目1</li>
-<li>项目2</li>
-<li>项目3</li>
-</ul>
-<p>正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</p>
-<p><img src="/posts/articletemplate.htm/图片url" alt="图片介绍"></p>
-<p><code>正文一些需要高亮色的文字</code></p>
-<p><a href="链接地址" class="LinkCard" target="_blank">引入链接</a></p>
+<h4 id="52-两个链表的第一个公共节点"><a href="#52-两个链表的第一个公共节点" class="headerlink" title="52.两个链表的第一个公共节点"></a>52.两个链表的第一个公共节点</h4><h5 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h5><pre><code>输入两个无环的单向链表，找出它们的第一个公共结点，如果没有公共节点则返回空。（注意因为传入数据是链表，所以错误测试数据的提示是用其他方式显示的，保证传入数据是正确的）
 
+数据范围： n \le 1000n≤1000
+要求：空间复杂度 O(1)O(1)，时间复杂度 O(n)O(n)
+
+例如，输入&amp;#123;1,2,3&amp;#125;,&amp;#123;4,5&amp;#125;,&amp;#123;6,7&amp;#125;时，两个无环的单向链表的结构如下图所示：
+</code></pre><p><img src="/posts/articletemplate564.htm/Users\86172\Documents\WeChat Files\wxid_yp1bexdqvj8122\FileStorage\File\2022-03\每日学习\每日学习\每日学习\剑指Offer\链表\394BB7AFD5CEA3DC64D610F62E6647A6.png" alt="img" style="zoom:33%;"></p>
+<pre><code>可以看到它们的第一个公共结点的结点值为6，所以返回结点值为6的结点。
+输入描述：
+输入分为是3段，第一段是第一个链表的非公共部分，第二段是第二个链表的非公共部分，第三段是第一个链表和二个链表的公共部分。 后台会将这3个参数组装为两个链表，并将这两个链表对应的头节点传入到函数FindFirstCommonNode里面，用户得到的输入只有pHead1和pHead2。
+返回值描述：
+返回传入的pHead1和pHead2的第一个公共结点，后台会打印以该节点为头节点的链表。
+</code></pre><h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><pre><code>输入：&amp;#123;1,2,3&amp;#125;,&amp;#123;4,5&amp;#125;,&amp;#123;6,7&amp;#125;
+返回值：&amp;#123;6,7&amp;#125;
+说明：第一个参数&amp;#123;1,2,3&amp;#125;代表是第一个链表非公共部分，第二个参数&amp;#123;4,5&amp;#125;代表是第二个链表非公共部分，最后的&amp;#123;6,7&amp;#125;表示的是2个链表的公共部分
+这3个参数最后在后台会组装成为2个两个无环的单链表，且是有公共节点的      
+
+输入：&amp;#123;1&amp;#125;,&amp;#123;2,3&amp;#125;,&amp;#123;&amp;#125;
+返回值：&amp;#123;&amp;#125;
+说明：2个链表没有公共节点 ,返回null，后台打印&amp;#123;&amp;#125;
+</code></pre><pre><code>方法一：
+我们可以把两个链表拼接起来，一个pHead1在前pHead2在后，一个pHead2在前pHead1在后
+这样，生成了两个相同长度的链表，那么我们只要同时遍历这两个表，就一定能找到公共结点
+时间复杂度O(m+n)，空间复杂度O(m+n)
+方法二：
+我们也可以先让把长的链表的头砍掉，让两个链表长度相同，这样，同时遍历也能找到公共结点
+此时，时间复杂度O(m+n)，空间复杂度为O(MAX(m,n))
+</code></pre><pre class=" language-lang-c++"><code class="language-lang-c++">/*
+struct ListNode &#123;
+    int val;
+    struct ListNode *next;
+    ListNode(int x) :
+            val(x), next(NULL) &#123;
+    &#125;
+&#125;;*/
+class Solution &#123;//下面所述的z为公共节点
+public://(x+z+y)=(y+z+x)把两个链表弄成一样长，相等即是有第一个公共节点(效果类似于把长链表的长的部分给去掉)
+    ListNode* FindFirstCommonNode( ListNode* pHead1, ListNode* pHead2) &#123;
+        ListNode *l1 = pHead1;
+        ListNode *l2 = pHead2;
+        while (l1 != l2) &#123;//判断是否相等，不相等就循环，当两个指针都指空也是一种相等，也会跳出循环
+            l1 = l1 ? l1->next : pHead2;//当前节点是否够用，不够即指向另一个链表
+            l2 = l2 ? l2->next : pHead1;
+        &#125;// l1 = l1.next if l1 else l2 <-python代码
+        return l1;
+    &#125;
+&#125;;
+</code></pre>
+<pre><code># class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+#
+# 
+# @param pHead1 ListNode类 
+# @param pHead2 ListNode类 
+# @return ListNode类
+#
+class Solution:
+    def FindFirstCommonNode(self , pHead1 , pHead2 ):
+        # write code here
+        l1,l2 = pHead1,pHead2
+        while l1 != l2:
+            l1 = l1.next if l1 else pHead2
+            l2 = l2.next if l2 else pHead1
+        return l1
+</code></pre>
             </div>
             <hr/>
 
@@ -1272,7 +1330,7 @@ h3:hover {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jnych.github.io/posts/articletemplate.html">https://jnych.github.io/posts/articletemplate.html</a>
+                    <a href="https://jnych.github.io/posts/articletemplate564.html">https://jnych.github.io/posts/articletemplate564.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1908,10 +1966,10 @@ h3:hover {
                 本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/posts/articletemplate.html">
+                <a href="/posts/articletemplate564.html">
                     <div class="card-image">
                         
-                        <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="这是技术文章模板">
+                        <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="两个链表的第一个公共节点">
                         
                         
                         <!-- 圣诞按钮 -->
@@ -1929,20 +1987,17 @@ h3:hover {
                         
                         <span class="card-title">
                           <span class="titlesline"></span>
-                          这是技术文章模板</span>
+                          两个链表的第一个公共节点</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前言，技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言。
+                            两个链表的第一个公共节点
 
-标题
-项目1
-项目2
-项目3
+52.两个链表的第一个公共节点描述输入两个无环的单向链表，找出它们的第一个公共结点，如果没有公共节点则返回空。（注意因为传入数据是链表，所以错误测试数据的提示是用其他方式显示的，保证传入数据是正确的）
 
-正文正文正文正文正文正文正文正文正文正文
+数据范围
                         
                     </div>
                     <div class="publish-info">
@@ -2238,7 +2293,7 @@ h3:hover {
             
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">30.1k</span>&nbsp;
+                class="white-color">30.7k</span>&nbsp;
             
             
             
