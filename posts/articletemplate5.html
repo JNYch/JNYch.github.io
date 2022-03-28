@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="这是技术文章模板, 这里是网站关键词">
+    <meta name="keywords" content="逻辑回归LR、正则化和高级优化, 这里是网站关键词">
     <meta name="description" content="这里是网站描述">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>这是技术文章模板 | itsNeko博客开源版</title>
+    <title>逻辑回归LR、正则化和高级优化 | itsNeko博客开源版</title>
     
     <script>
         // 隐藏
@@ -900,7 +900,7 @@ class="themespring" -->
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">这是技术文章模板</h1>
+                    <h1 class="description center-align post-title">逻辑回归LR、正则化和高级优化</h1>
                 </div>
             </div>
         </div>
@@ -1219,14 +1219,14 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    251
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -1236,17 +1236,81 @@ h3:hover {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <div class="note info">前言，技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言。</div>
+                <div class="note info">逻辑回归LR、正则化和高级优化</div>
 
-<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><ul>
-<li>项目1</li>
-<li>项目2</li>
-<li>项目3</li>
+<p>线性回归预测函数：</p>
+<script type="math/tex; mode=display">
+h_{\theta}(x)=\theta^{T}x</script><p>逻辑回归预测函数：</p>
+<script type="math/tex; mode=display">
+h_{\theta}^{(x)}=\frac{1}{1+e^{-\theta^{T}x}}</script><p>线性回归损失函数：</p>
+<script type="math/tex; mode=display">
+J(\theta)=\frac{1}{2m}\sum_{i=1}^m(h(\theta^{(i)}-y^i))^2+\frac{\lambda}{2m}\sum_{j=1}^m\theta_j^2</script><p>逻辑回归损失函数：</p>
+<p>MSE直接应用到LR中会导致损失函数变成非凸函数，所以我们加入log让损失函数变成了凸函数</p>
+<p>极大似然（二项分布中）：<img src="https://s2.loli.net/2022/03/28/JVhKAlC8GqdmHuB.png" alt="image-20220307115455459" style="zoom:80%;"></p>
+<p>非二项分布：<img src="https://s2.loli.net/2022/03/28/xtyceCuAWTp3Hfz.png" alt="image-20220308100421863" style="zoom:80%;">（特定采样结果出现的概率累乘）</p>
+<p>由于小数连乘操作可能造成<strong>下溢</strong>，一般会采用<strong>极大对数似然</strong>进行计算</p>
+<p>极大对数似然（二项分布中）：<img src="https://s2.loli.net/2022/03/28/RVpeWD29NGnHkd4.png" alt="image-20220307115510199" style="zoom:80%;"></p>
+<p>非二项分布：<img src="https://s2.loli.net/2022/03/28/Pt3ulvn1SE6fYzW.png" alt="image-20220308102624958" style="zoom:80%;"></p>
+<p>损失函数（经验损失+结构损失）：</p>
+<script type="math/tex; mode=display">
+J(\theta)=-\frac{1}{2m}\sum_{i=1}^m(y^ilog{h_\theta(x^i)}+(1-y^i)log(1-h_\theta x^{(i)})^2+\frac{\lambda}{2m}\sum_{j=1}^m\theta_j^2</script><p>两者损失函数求导后，<strong>除了假设函数不一样，表示形式是一样的</strong>：</p>
+<script type="math/tex; mode=display">
+\frac{\part J(\theta)}{\part{\theta_j}}=\frac{1}{m}\sum_{i=1}^m(h_{\theta}(x^{(i)}-y^{(i)})x_j^{(i)}</script><p><img src="https://s2.loli.net/2022/03/28/qBdCjLkpsAW7gcu.png" alt="image-20220301171851453" style="zoom:80%;"></p>
+<p>损失函数中参数倍数变化并不会影响最优值的最终结果</p>
+<h4 id="1-1-逻辑回归LR-logistic-regression"><a href="#1-1-逻辑回归LR-logistic-regression" class="headerlink" title="1.1 逻辑回归LR(logistic regression)"></a>1.1 逻辑回归LR(logistic regression)</h4><h5 id="1-1-1-LR与sigmiod"><a href="#1-1-1-LR与sigmiod" class="headerlink" title="1.1.1 LR与sigmiod"></a>1.1.1 LR与sigmiod</h5><script type="math/tex; mode=display">
+h_{\theta}^{(x)}=\frac{1}{1+e^{-\theta^{T}x}}</script><p>其中$\theta$是收敛之后得到的结果</p>
+<p><img src="https://s2.loli.net/2022/03/28/qDIhoYGim7lnbKk.png" alt="image-20220218231835992" style="zoom:80%;"></p>
+<p><img src="https://s2.loli.net/2022/03/28/t1lJq9RNegYmLcH.png" alt="image-20220219101314250" style="zoom:80%;"></p>
+<p>根据sigmoid曲线，$h_{\theta}≥0$时，置为1；否则置为0</p>
+<h6 id="1-1-1-1-决策边界"><a href="#1-1-1-1-决策边界" class="headerlink" title="1.1.1.1 决策边界"></a>1.1.1.1 决策边界</h6><p><img src="https://s2.loli.net/2022/03/28/2BNgWfo6KwAqGzE.png" alt="image-20220219102924814" style="zoom:80%;"></p>
+<p><img src="https://s2.loli.net/2022/03/28/5pSIeCALls2z8nr.png" alt="image-20220219103450449" style="zoom:80%;"></p>
+<h5 id="1-1-2-代价函数"><a href="#1-1-2-代价函数" class="headerlink" title="1.1.2 代价函数"></a>1.1.2 代价函数</h5><p>当我们把线性回归的代价函数放到逻辑回归上使用时，会发现代价函数$J$由凸函数(convex)变成了有很多局部最大值的非凸函数，导致寻找最小值变得困难，所有我们选择了另一种能使LR变成凸函数的代价函数。</p>
+<p><img src="https://s2.loli.net/2022/03/28/1gdrP678mFIhToq.png" alt="image-20220219104254098" style="zoom:80%;"></p>
+<p>而对数函数log的曲线，能让代价函数变为凸函数的方程吗？</p>
+<p>分析</p>
+<p><img src="https://s2.loli.net/2022/03/28/ICF1KWedXqVLzDT.png" alt="image-20220219110405097" style="zoom:80%;"></p>
+<p>化简</p>
+<p><img src="https://s2.loli.net/2022/03/28/c6oIKGzs1MUZgpT.png" alt="image-20220219112119546" style="zoom:80%;"></p>
+<p>得到如下结果，使用了==极大似然法==（能够在统计学中能为不同模型快速寻找参数），并且结果是凸函数</p>
+<script type="math/tex; mode=display">
+\begin{align}
+J(\theta)
+&  = \frac{1}{m}\sum_{i=1}^mCost(h_{\theta}(x^{(i)},y^{(i)}))\\
+& = -\frac{1}{m}[\sum_{i=1}^my^{(i)}logh_\theta(x^{(i)})+(1-y^{(i)})log(1-h_\theta(x^{(i)}))]
+\end{align}</script><p>参数梯度下降：</p>
+<p><img src="https://s2.loli.net/2022/03/28/m5EHc1V9MaerDTU.png" alt="image-20220219113754588" style="zoom:80%;"></p>
+<p>==可以发现，求导后线性回归和逻辑回归的公式是一样的<strong>，</strong>但是他们的假设函数h(θ)是不同的，所以两个函数梯度下降公式是不同的==</p>
+<p>求导sigmiod得到$\partial_{sigmoid}=sigmoid[1-sigmoid]$</p>
+<h4 id="1-2-高级优化"><a href="#1-2-高级优化" class="headerlink" title="1.2 高级优化"></a>1.2 高级优化</h4><ul>
+<li>共轭梯度法Conjugate Gradient</li>
+<li>拟牛顿法中的对称正定迭代矩阵BFGS</li>
+<li>近似BFGS，L-BFGS相对BFGS能够减少空间的使用</li>
 </ul>
-<p>正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</p>
-<p><img src="/posts/articletemplate5.htm/图片url" alt="图片介绍"></p>
-<p><code>正文一些需要高亮色的文字</code></p>
-<p><a href="链接地址" class="LinkCard" target="_blank">引入链接</a></p>
+<h5 id="1-2-1-优点"><a href="#1-2-1-优点" class="headerlink" title="1.2.1 优点"></a>1.2.1 优点</h5><ul>
+<li>无需设定学习率，学习率自动动态调整</li>
+<li>大部分情况下速度比梯度下降法快很多</li>
+</ul>
+<h5 id="1-2-2-缺点"><a href="#1-2-2-缺点" class="headerlink" title="1.2.2 缺点"></a>1.2.2 缺点</h5><p>实现比梯度下降法复杂很多，但是基本上都有封装好的库，如python中的<code>scipy.optimize.fmin_bfgs</code></p>
+<h4 id="1-3-逻辑回归的多分类任务"><a href="#1-3-逻辑回归的多分类任务" class="headerlink" title="1.3 逻辑回归的多分类任务"></a>1.3 逻辑回归的多分类任务</h4><p>训练多个逻辑回归分类器，然后将输入放到各分类器中，将输入归类为得分值最大的类别即可</p>
+<h4 id="1-4-过拟合和欠拟合解决"><a href="#1-4-过拟合和欠拟合解决" class="headerlink" title="1.4 过拟合和欠拟合解决"></a>1.4 过拟合和欠拟合解决</h4><h5 id="1-4-1-过拟合"><a href="#1-4-1-过拟合" class="headerlink" title="1.4.1 过拟合"></a>1.4.1 过拟合</h5><ul>
+<li>适当减少多余的参数</li>
+<li>使用正则化，适当减少参数维度(阶/次方)/大小</li>
+<li>增加数据量</li>
+<li>dropout</li>
+<li>清晰数据</li>
+<li>提取终止训练</li>
+</ul>
+<h5 id="1-4-2-欠拟合"><a href="#1-4-2-欠拟合" class="headerlink" title="1.4.2 欠拟合"></a>1.4.2 欠拟合</h5><ul>
+<li>增加特征和数据</li>
+<li>增加高阶多项式项</li>
+<li>减少正则化参数</li>
+</ul>
+<h4 id="1-5-正则化惩罚项"><a href="#1-5-正则化惩罚项" class="headerlink" title="1.5 正则化惩罚项"></a>1.5 正则化惩罚项</h4><p>加入惩罚项后，会降低高维参数的值，让他们趋于0（也就是==简化假设模型，限制模型参数，保持参数尽量小==），这样能让假设h函数变得更加的平滑</p>
+<p><img src="https://s2.loli.net/2022/03/28/vmqSDy73hwxEAfM.png" alt="image-20220219164340840"></p>
+<p>我们不知道哪些参数是高维的，该去降低哪些参数的维度，在代价函数中加入正则化惩罚项，对每个参数进行限制</p>
+<h5 id="1-5-1-惩罚项公式以及作用"><a href="#1-5-1-惩罚项公式以及作用" class="headerlink" title="1.5.1 惩罚项公式以及作用"></a>1.5.1 惩罚项公式以及作用</h5><p>公式：<img src="https://s2.loli.net/2022/03/28/4NlhR2pBwMfGxCH.png" alt="image-20220219170024442"></p>
+<p> <img src="https://s2.loli.net/2022/03/28/w64HTcyeGR7XqQW.png" alt="image-20220219222810433"></p>
+<p>==简化假设模型，限制模型参数，保持参数尽量小==，$\lambda$作用是控制两个不同目标之间的取舍，设置合适的$\lambda$参数防止模型欠拟合或者无明显作用</p>
 
             </div>
             <hr/>
@@ -1848,7 +1912,7 @@ h3:hover {
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/articletemplate6.html">
+                <a href="/posts/articletemplate.html">
                     <div class="card-image">
                         
                         <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="这是技术文章模板">
@@ -2233,7 +2297,7 @@ h_{\theta}(x)=\theta^{T}x
             
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">18.3k</span>&nbsp;
+                class="white-color">14k</span>&nbsp;
             
             
             

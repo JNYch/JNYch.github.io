@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Focal Loss和Balanced CE(样本比例不均衡问题), 这里是网站关键词">
+    <meta name="keywords" content="这是技术文章模板, 这里是网站关键词">
     <meta name="description" content="这里是网站描述">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Focal Loss和Balanced CE(样本比例不均衡问题) | itsNeko博客开源版</title>
+    <title>这是技术文章模板 | itsNeko博客开源版</title>
     
     <script>
         // 隐藏
@@ -900,7 +900,7 @@ class="themespring" -->
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Focal Loss和Balanced CE(样本比例不均衡问题)</h1>
+                    <h1 class="description center-align post-title">这是技术文章模板</h1>
                 </div>
             </div>
         </div>
@@ -1219,14 +1219,14 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    251
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    1 分
                 </div>
                 
 
@@ -1238,140 +1238,15 @@ h3:hover {
             <div id="articleContent">
                 <div class="note info">前言，技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言。</div>
 
-<h4 id="1-信息量"><a href="#1-信息量" class="headerlink" title="1.信息量"></a>1.信息量</h4><p>当越不可能的事件或者相关程度越高的事件（今天中午总统吃什么，与我们相关程度低，信息量小；但是对于想应聘总统厨师的人来说，这件事的信息量就很大）发生了，我们获取到的信息量就越大，反之信息量越小。</p>
-<p>样本不足会导致模型信息量不足，从而不能很好的拟合数据</p>
-<h4 id="2-熵"><a href="#2-熵" class="headerlink" title="2.熵"></a>2.熵</h4><p>熵用来表示一个系统中所有信息量的期望，也可以用来表示一个系统的混乱程度</p>
-<h4 id="3-相对熵"><a href="#3-相对熵" class="headerlink" title="3.相对熵"></a>3.相对熵</h4><p>用来衡量两个分布的差异，或者说是一个分布变换到另一个分布需要的信息增量</p>
-<p>在机器学习中，预测分布Q在训练的过程中信息量不足，虽然可以大致描述，但是描述得有偏差，需要额外的一些信息增量才能达到和样本真实分布一样的描述。经过反复训练后，信息量足够描述后就不需要额外的信息增量了。</p>
-<p>$相对熵=p的熵-pq交叉熵$：<img src="https://s2.loli.net/2022/03/28/wsnqF3CvR5AdTuk.png" alt="image-20220313143521524" style="zoom:80%;"></p>
-<h4 id="4-交叉熵"><a href="#4-交叉熵" class="headerlink" title="4.交叉熵"></a>4.交叉熵</h4><p>评估标签和预测值之间的差距，而相对熵中p的熵是不变的，所以只需关注交叉熵即可</p>
-<p>在机器学习中常用交叉熵作loss</p>
-<h4 id="5-交叉熵应用"><a href="#5-交叉熵应用" class="headerlink" title="5.交叉熵应用"></a>5.交叉熵应用</h4><h5 id="5-1-单标签多分类任务"><a href="#5-1-单标签多分类任务" class="headerlink" title="5.1 单标签多分类任务"></a>5.1 单标签多分类任务</h5><p>一张图片只被归为一个标签，对应的一个batch的loss就是：</p>
-<p><img src="https://s2.loli.net/2022/03/28/LnsDHy9JFiK7Gv5.png" alt="image-20220313144748836"></p>
-<h5 id="5-2-多标签多分类任务"><a href="#5-2-多标签多分类任务" class="headerlink" title="5.2 多标签多分类任务"></a>5.2 多标签多分类任务</h5><p>一张图片可能会被归为多个标签，每个Label都是独立分布的，可以用交叉熵对每个独立的类别进行计算，每个类别只有是或不是两种可能，服从弄二项分布，每个类别对应的交叉熵为：</p>
-<p><img src="https://s2.loli.net/2022/03/28/vPKTVdGZ4MWmpIX.png" alt="image-20220313145145469"></p>
-<p>如果一张图片中同时存在青蛙和老鼠，且预测结果如下：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">*</th>
-<th style="text-align:left">猫</th>
-<th style="text-align:left">青蛙</th>
-<th style="text-align:left">老鼠</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Label</td>
-<td style="text-align:left">0</td>
-<td style="text-align:left">1</td>
-<td style="text-align:left">1</td>
-</tr>
-<tr>
-<td style="text-align:left">Predicted</td>
-<td style="text-align:left">0.1</td>
-<td style="text-align:left">0.7</td>
-<td style="text-align:left">0.8</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>则$loss=loss<em>猫+loss</em>蛙+loss_鼠$，而损失方式计算如下：</p>
-<p><img src="https://s2.loli.net/2022/03/28/sZQKVfOXG24TtBU.png" alt="image-20220313145344159" style="zoom:80%;"></p>
-<blockquote>
-<p>总结</p>
-</blockquote>
-<p>对于多分类任务(包括二分类)的交叉熵损失为：</p>
-<p><img src="https://s2.loli.net/2022/03/28/ecYqxWb9SkAUpM8.png" alt="image-20220313150602363" style="zoom:80%;"></p>
-<p>其中$y_i$表示真实概率，$p_i$表示预测概率</p>
-<h4 id="6-focal-loss"><a href="#6-focal-loss" class="headerlink" title="6. focal loss"></a>6. focal loss</h4><p>focal loss最初用于图像领域解决是数据不平衡造成的模型性能问题。</p>
-<h5 id="6-1-样本不均衡问题"><a href="#6-1-样本不均衡问题" class="headerlink" title="6.1 样本不均衡问题"></a>6.1 样本不均衡问题</h5><p>例如，在欺诈识别的案例中，好坏样本的比例为10000 : 1，这样模型很容易学习到一个把所有样本都预测为好的模型，也就是模型没有拟合到极大似然，而是只学习到了<strong>先验</strong>(样本分布)，导致模型欠拟合。</p>
-<blockquote>
-<p>影响</p>
-</blockquote>
-<p>样本不均衡带来的根本影响是：模型会学习到样本比例这个先验信息，类别不均衡下的分类边界会侵占少数样本类的区域，也就是影响模型学习的更本质的特征，影响模型的鲁棒性。</p>
-<p><img src="https://s2.loli.net/2022/03/28/rQwop4XLc5umFDe.png" alt="img" style="zoom: 33%;"></p>
-<blockquote>
-<p>问题分析</p>
-</blockquote>
-<p><strong>减少模型学习样本分布(先验信息)</strong>，<strong>让模型学习数据的本质特征</strong>，这样就能解决样本不均衡问题。</p>
-<blockquote>
-<p>必要性</p>
-</blockquote>
-<p>从分类效果出发，不均衡对于分类结果的影响不一定是不好的（除了在预测精度要求比较高等环境下），什么时候需要解决样本不均衡(抑制先验影响)呢？</p>
-<ul>
-<li>判断任务是否复杂：任务的复杂度越高，对样本不均衡越敏感（特征量、噪音等都和任务的复杂度相关）</li>
-<li>训练样本分布与真实样本分布不一致</li>
-<li>不均衡样本中占少数的那个类别数量是不是实在太少，导致模型学习不到好的特征。<ul>
-<li>解决方法<ul>
-<li>解决样本不均衡的情况</li>
-<li>使用一些数据增强的方法</li>
-<li>尝试像异常检测这种的<strong>单分类模型</strong></li>
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><ul>
+<li>项目1</li>
+<li>项目2</li>
+<li>项目3</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>样本不均衡问题解决</p>
-</blockquote>
-<p>在学习任务有些难度的情况下，我们可以通过一些方法使得不同类别的样本对模型学习时的loss贡献权重均衡，从而<strong>消除模型对不同类别的偏向性</strong>，学到更为本质的特征。</p>
-<p>我们现在就开始探讨这些解决方法：</p>
-<h6 id="6-1-1-样本层面"><a href="#6-1-1-样本层面" class="headerlink" title="6.1.1 样本层面"></a>6.1.1 样本层面</h6><ul>
-<li><p>欠采样和过采样</p>
-<ul>
-<li>欠采样：减少多数类的数量（如随机欠采样、NearMiss、ENN等）</li>
-<li>过采样：尽量多地增加少数类的样本数量（如随机过采样、数据增强等），使得类别间项目均衡</li>
-<li>混合采样：如smote+ENN</li>
-</ul>
-</li>
-<li><p>数据增强</p>
-<ul>
-<li><p>单样本增强(主要用于图像)：几何操作(翻转缩放)、颜色变换、随机擦除(裁剪)、添加噪声等方法，<code>imgaug</code>库</p>
-</li>
-<li><p>多样本增强：通过组合及转换多个样本，主要有Smote、SamplePairing、Mixup等方法，在特征空间内构造已知样本的邻域值样本</p>
-<p><img src="https://s2.loli.net/2022/03/28/MDu2JCfZFB4ctGi.png" alt="image-20220313175211682" style="zoom:50%;"></p>
-</li>
-<li><p>基于深度学习的数据增强</p>
-<ul>
-<li><p>生成模型如<strong>变分自编码网络</strong>(VAE)和<strong>生成对抗网络</strong>(GAN)</p>
-<p><img src="https://s2.loli.net/2022/03/28/Q2lLNr1bMYDixdC.png" alt="image-20220313175505963" style="zoom:50%;"></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>缺点及解决方案</p>
-</blockquote>
-<ul>
-<li>随机欠采样可能会导致丢弃含有重要信息的样本，在计算性能足够的情况下，可以考虑根据数据分布的采样方法(通常是基于距离的邻域关系)，如ENN、NearMiss等</li>
-<li>随机过采样或数据增强样本也有可能是引入片面噪声，导致过拟合；也可能是引入信息量不大的样本。此时需要考虑调整采样方法，或者通过半监督算法(可借鉴Pu-Learning思路)选择增强数据的较优子集，以提高模型的泛化能力</li>
-</ul>
-<h6 id="6-1-2-损失函数层面"><a href="#6-1-2-损失函数层面" class="headerlink" title="6.1.2 损失函数层面"></a>6.1.2 损失函数层面</h6><p>损失函数层面主流的方法就是代价敏感学习(cost-sensitive)，即为不同分类损失给予不同的惩罚力度(权重)，在调节类别平衡的同时，也不会增加计算复杂度。</p>
-<ul>
-<li><p>常用方法</p>
-<ul>
-<li><p>class weight：<code>scikit</code>库中内置的方法，可以为不同类别的样本提供不同的权重(少数类的权重更高)，从而平衡各类别的学习。如<code>clf2=LogisticRegression(class_weight=&#123;0:1,1:10&#125;)  # 代价敏感学习</code>为少数类分配更高的权重，以避免决策偏重多数类的现象（类别权重除了设定balanced，还可以作为一个超参搜索）</p>
-<p><img src="https://s2.loli.net/2022/03/28/4YrXUtIhokPuGVW.png" alt="image-20220313202920598" style="zoom: 50%;"></p>
-</li>
-<li><p>OHEM和Focal Loss：类别的不平衡可以归结为难易样本的不平衡，而难易样本的不平衡可以归结为梯度的不平衡，OHEM和Focal Loss都做了两件事：难样本（错分类(或者说是高损失)的样本）挖掘和类别的平衡。（另外还有GHM、PISA等方法）</p>
-<ul>
-<li><p>OHEM(Online Hard Example Mining)算法的核心是选择一些hard examples（多样性和高损失的样本）作为训练样本，针对性地改善模型学习效果。对于数据类别不平衡问题，OHEM的针对性更强。</p>
-</li>
-<li><p>Focal loss的核心思想是在交叉熵损失函数的基础上，<strong>增加了类别的不同权重以及困难（高损失）样本的权重</strong>，以改善模型学习效果。<strong>$p_t$表示与真实值接近程度</strong>，越大越接近，即分类越准确（<strong>也可以说$p_t$反映了分类的难易程度</strong>。$p_t$越大，说明分类置信度越高，样本越易分；反之越难分）。系数$(1-p_t)^\gamma$是<strong>调节因子</strong>，相比交叉熵损失，==Focal Loss对于分类不准确的样本损失没有变化，对于分类准确的样本损失会变小==。整体而言，<strong>相当于增加了分类不准确样本的权重</strong>。</p>
-<p><img src="https://s2.loli.net/2022/03/28/liZtSjE6mXNIU5K.png" alt="image-20220313203941650" style="zoom: 67%;"></p>
-</li>
-<li><p>平衡交叉熵函数：合理分配权重，平衡损失函数分布，即在损失函数中增加惩罚项$\alpha$</p>
-<p><img src="https://s2.loli.net/2022/03/28/T4cBRsOdSVH3DkJ.png" alt="image-20220313205241348" style="zoom:67%;">，其中$\frac{\alpha}{1-\alpha}=\frac{n}{m}$，权重根据样本分布设置</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<p>正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文</p>
+<p><img src="/posts/articletemplate.htm/图片url" alt="图片介绍"></p>
+<p><code>正文一些需要高亮色的文字</code></p>
+<p><a href="链接地址" class="LinkCard" target="_blank">引入链接</a></p>
 
             </div>
             <hr/>
@@ -1973,10 +1848,10 @@ h3:hover {
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/articletemplate2.html">
+                <a href="/posts/articletemplate.html">
                     <div class="card-image">
                         
-                        <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="最小二乘法">
+                        <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="Focal Loss和Balanced CE(样本比例不均衡问题)">
                         
                         <!-- 福袋按钮 -->
                         <div class="caishendeng">        
@@ -1987,16 +1862,16 @@ h3:hover {
                         <span class="card-title">
                           <!-- 文章卡片hover线条效果 -->
                           <span class="titlesline"></span>
-                          最小二乘法
+                          Focal Loss和Balanced CE(样本比例不均衡问题)
                         </span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前言，技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言。
+                            Focal Loss和Balanced CE(样本比例不均衡问题)
 
-“损失函数”是如何设计出来的？直观理解“最小二乘法”和“极大似然估计法”
+1.信息量当越不可能的事件或者相关程度越高的事件（今天中午总统吃什么，与我们相关程度低，信息量小；但是对于想应聘总统厨师的人来说，这件事的信息量就很大）发生了，我们获取到
                         
                     </div>
                     <div class="publish-info">
@@ -2033,11 +1908,10 @@ h3:hover {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/e.html">
+                <a href="/posts/articletemplate5.html">
                     <div class="card-image">
                         
-                        
-                        <img src="/medias/banner/2.jpg" class="responsive-img" alt="最小二乘法">
+                        <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="逻辑回归LR、正则化和高级优化">
                         
                         <!-- 福袋按钮 -->
                         <div class="caishendeng">        
@@ -2048,29 +1922,47 @@ h3:hover {
                         <span class="card-title">
                           <!-- 文章卡片hover线条效果 -->
                           <span class="titlesline"></span>
-                          最小二乘法
+                          逻辑回归LR、正则化和高级优化
                         </span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前言，技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言技术文章前言。
+                            逻辑回归LR、正则化和高级优化
 
-“损失函数”是如何设计出来的？直观理解“最小二乘法”和“极大似然估计法”
+线性回归预测函数：
+
+h_{\theta}(x)=\theta^{T}x逻辑回归预测函数：
+
+h_{\theta}^{(x)}=\frac{1}{1+e^{-\theta^{T}x}}线性回归损失函数：
+
+
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-14
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            itsNeko博客开源版
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%8A%80%E6%9C%AF/">
+                        <span class="chip bg-color">技术</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -2340,7 +2232,7 @@ h3:hover {
             
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-                class="white-color">18.3k</span>&nbsp;
+                class="white-color">14k</span>&nbsp;
             
             
             
