@@ -1,10 +1,10 @@
 https://jnych.github.io/posts/articletemplate.html
-https://jnych.github.io/posts/articletemplate.html
-https://jnych.github.io/posts/articletemplate.html
-https://jnych.github.io/posts/articletemplate.html
+https://jnych.github.io/posts/b.html
+https://jnych.github.io/posts/c.html
+https://jnych.github.io/posts/d.html
 https://jnych.github.io/posts/itsneko-opensource-blog.html
+https://jnych.github.io/posts/a.html
 https://jnych.github.io/posts/articletemplate.html
-https://jnych.github.io/posts/articletemplate.html
-https://jnych.github.io/posts/articletemplate.html
-https://jnych.github.io/posts/articletemplate.html
+https://jnych.github.io/posts/e.html
+https://jnych.github.io/posts/f.html
 https://jnych.github.io/posts/essay-demo.html
