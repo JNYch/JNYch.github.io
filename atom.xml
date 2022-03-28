@@ -6,7 +6,7 @@
   <link href="https://jnych.github.io/atom.xml" rel="self"/>
   
   <link href="https://jnych.github.io/"/>
-  <updated>2022-03-28T09:50:41.765Z</updated>
+  <updated>2022-03-28T09:57:12.056Z</updated>
   <id>https://jnych.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>非线性假设、多分类和神经网络</title>
-    <link href="https://jnych.github.io/posts/dca8.html"/>
-    <id>https://jnych.github.io/posts/dca8.html</id>
+    <link href="https://jnych.github.io/posts/articletemplate.html"/>
+    <id>https://jnych.github.io/posts/articletemplate.html</id>
     <published>2022-03-23T02:39:38.000Z</published>
-    <updated>2022-03-28T09:50:41.765Z</updated>
+    <updated>2022-03-28T09:57:12.056Z</updated>
     
     
       
@@ -39,10 +39,10 @@
   
   <entry>
     <title>逻辑回归LR、正则化和高级优化</title>
-    <link href="https://jnych.github.io/posts/9744.html"/>
-    <id>https://jnych.github.io/posts/9744.html</id>
+    <link href="https://jnych.github.io/posts/articletemplate.html"/>
+    <id>https://jnych.github.io/posts/articletemplate.html</id>
     <published>2022-01-02T09:19:33.000Z</published>
-    <updated>2022-03-28T09:50:20.977Z</updated>
+    <updated>2022-03-28T09:57:22.771Z</updated>
     
     
       
@@ -60,10 +60,10 @@
   
   <entry>
     <title>朴素贝叶斯和贝叶斯网络</title>
-    <link href="https://jnych.github.io/posts/2176.html"/>
-    <id>https://jnych.github.io/posts/2176.html</id>
+    <link href="https://jnych.github.io/posts/articletemplate.html"/>
+    <id>https://jnych.github.io/posts/articletemplate.html</id>
     <published>2021-12-30T06:13:53.000Z</published>
-    <updated>2022-03-28T09:49:54.957Z</updated>
+    <updated>2022-03-28T09:57:25.737Z</updated>
     
     
       
@@ -81,10 +81,10 @@
   
   <entry>
     <title>线性回归、代价函数和梯度下降法</title>
-    <link href="https://jnych.github.io/posts/5c98.html"/>
-    <id>https://jnych.github.io/posts/5c98.html</id>
+    <link href="https://jnych.github.io/posts/articletemplate.html"/>
+    <id>https://jnych.github.io/posts/articletemplate.html</id>
     <published>2021-12-23T07:29:16.000Z</published>
-    <updated>2022-03-28T09:49:48.410Z</updated>
+    <updated>2022-03-28T09:57:34.530Z</updated>
     
     
       
@@ -127,10 +127,10 @@
   
   <entry>
     <title>拉格朗日乘子法和KKT条件</title>
-    <link href="https://jnych.github.io/posts/d0e.html"/>
-    <id>https://jnych.github.io/posts/d0e.html</id>
+    <link href="https://jnych.github.io/posts/articletemplate.html"/>
+    <id>https://jnych.github.io/posts/articletemplate.html</id>
     <published>2021-12-14T04:23:12.000Z</published>
-    <updated>2022-03-28T09:51:09.907Z</updated>
+    <updated>2022-03-28T09:57:17.623Z</updated>
     
     
       
@@ -173,10 +173,10 @@
   
   <entry>
     <title>最小二乘法</title>
-    <link href="https://jnych.github.io/posts/cf26.html"/>
-    <id>https://jnych.github.io/posts/cf26.html</id>
+    <link href="https://jnych.github.io/posts/articletemplate.html"/>
+    <id>https://jnych.github.io/posts/articletemplate.html</id>
     <published>2021-12-10T08:49:07.000Z</published>
-    <updated>2022-03-28T09:49:43.280Z</updated>
+    <updated>2022-03-28T09:57:37.511Z</updated>
     
     
       
@@ -194,10 +194,10 @@
   
   <entry>
     <title>Focal Loss和Balanced CE(样本比例不均衡问题)</title>
-    <link href="https://jnych.github.io/posts/7abb.html"/>
-    <id>https://jnych.github.io/posts/7abb.html</id>
+    <link href="https://jnych.github.io/posts/articletemplate.html"/>
+    <id>https://jnych.github.io/posts/articletemplate.html</id>
     <published>2021-12-10T04:01:44.000Z</published>
-    <updated>2022-03-28T09:51:20.968Z</updated>
+    <updated>2022-03-28T09:57:42.008Z</updated>
     
     
       
@@ -207,21 +207,6 @@
     <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
         
       
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CSS3</title>
-    <link href="https://jnych.github.io/posts/7099.html"/>
-    <id>https://jnych.github.io/posts/7099.html</id>
-    <published>2021-10-30T10:13:28.000Z</published>
-    <updated>2021-11-11T05:26:50.728Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;CSS3&quot;&gt;&lt;a href=&quot;#CSS3&quot; class=&quot;headerlink&quot; title=&quot;CSS3&quot;&gt;&lt;/a&gt;CSS3&lt;/h1&gt;&lt;h2 id=&quot;浏览器内核&quot;&gt;&lt;a href=&quot;#浏览器内核&quot; class=&quot;headerlink&quot; title=&quot;浏览器内核&quot;&gt;&lt;/a&gt;浏览器内核&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/posts/7099.htm/a.jpg&quot; style=&quot;zoom:80%;&quot;&gt;&lt;/p&gt;</summary>
     
     
     
